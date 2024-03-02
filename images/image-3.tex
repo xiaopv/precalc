@@ -1,0 +1,22 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+
+			\usepackage{tikz}       
+		\ifdefined\tikzset
+    \tikzset{ampersand replacement = \amp}
+\fi
+
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+\begin{document}
+\pagestyle{empty}
+
+							\begin{tikzpicture}
+								\coordinate [label=left:$C$] (C) at (-1.5cm,-1.cm);
+								\coordinate [label=right:$A$] (A) at (1.5cm,-1.0cm);
+								\coordinate [label=above:$B$] (B) at (1.5cm,1.0cm);
+								\draw (C) -- node[above] {hyp} (B) -- node[right] {opp} (A) -- node[below] {adj} (C);
+								\coordinate [label=right:$\alpha$] (D) at (-1.3cm,-0.85cm);
+							\end{tikzpicture}
+					\end{document}

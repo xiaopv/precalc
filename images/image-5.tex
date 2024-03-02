@@ -1,0 +1,25 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+
+			\usepackage{tikz}       
+		\ifdefined\tikzset
+    \tikzset{ampersand replacement = \amp}
+\fi
+
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+\begin{document}
+\pagestyle{empty}
+
+							\begin{tikzpicture}
+								\coordinate [label=left:$C$] (C) at (-1.5cm,-1.0cm);
+								\coordinate [label=right:$A$] (A) at (1.5cm,-1.0cm);
+								\coordinate [label=above:$B$] (B) at (0cm,1.6cm);
+								\coordinate [label=below:$D$] (D) at (0cm,-1.0cm);
+								\draw (C) -- node[below] {$1$} (D) -- node[below] {$1$} (A) -- node[right] {$2$} (B) -- node[left] {$2$} (C);
+								\draw (B) -- (D);
+								\coordinate [label=right:$\frac{\pi}{6}$] (E) at (-0.15cm,1.0cm);
+								\coordinate [label=below:$\frac{\pi}{3}$] (F) at (1.1cm,-0.4cm);
+							\end{tikzpicture}
+					\end{document}

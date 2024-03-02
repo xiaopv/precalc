@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Function Transformations and Rational Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href="http://www.utica.edu/faculty_staff/xixiao/" target="_blank"><img src="images/uc_logo.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="article-1.html"><span class="title">Precalculus</span></a></h1>
+<p class="byline"></p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-log.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="article-1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-trig.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1"><ul class="structural">
+<li><div class="toc-item"><a href="section-linear.html" class="internal"><span class="codenumber">1</span> <span class="title">Linear Functions and Their Modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Quadratic Functions and their modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-exp.html" class="internal"><span class="codenumber">3</span> <span class="title">Exponential Functions and Their Modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-log.html" class="internal"><span class="codenumber">4</span> <span class="title">Logarithmic Functions and Their Modeling</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="section-misc.html" class="internal"><span class="codenumber">5</span> <span class="title">Function Transformations and Rational Functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-trig.html" class="internal"><span class="codenumber">6</span> <span class="title">Trigonometric Functions: Basics</span></a></div></li>
+<li><div class="toc-item"><a href="section-trig-adv.html" class="internal"><span class="codenumber">7</span> <span class="title">Trigonometric Functions: Additional Topics</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="section-misc"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">5</span><span class="space"> </span><span class="title">Function Transformations and Rational Functions</span>
+</h2>
+<div class="para" id="p-28">In this section, we will examine how to build new functions from existing functions and how the graphs of the new functions relate to the original ones.</div>
+<article class="proposition theorem-like" id="proposition-35"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span>
+</h3>Given a function <span class="process-math">\(f(x)=x^2\)</span> and two real numbers <span class="process-math">\(h\)</span> and <span class="process-math">\(k\text{.}\)</span> <ol class="decimal">
+<li id="li-119"><div class="para" id="p-derived-li-119">Write down the function formula for a new function <span class="process-math">\(g(x) = f(x-h)+k\text{.}\)</span>
+</div></li>
+<li id="li-120"><div class="para" id="p-derived-li-120">Go to the link <a class="external" href="https://www.desmos.com/calculator/z82wdytmxl" target="_blank">https://www.desmos.com/calculator/z82wdytmxl</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a>. Begin by setting <span class="process-math">\(h = 0\)</span> and <span class="process-math">\(k=0\text{.}\)</span>
+</div></li>
+<li id="li-121"><div class="para logical" id="p-29">
+<div class="para">The role of <span class="process-math">\(h\text{:}\)</span>
+</div>
+<ol class="lower-alpha">
+<li id="li-122"><div class="para" id="p-derived-li-122">What happens as <span class="process-math">\(h\)</span> increases from <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+<li id="li-123"><div class="para" id="p-derived-li-123">What happens as <span class="process-math">\(h\)</span> decreases from <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+<li id="li-124"><div class="para" id="p-derived-li-124">Describes in words how different values of <span class="process-math">\(h\)</span> affect the graph of the function <span class="process-math">\(g(x)\text{.}\)</span>
+</div></li>
+<li id="li-125"><div class="para" id="p-derived-li-125">Without graphing, predict how the graph of <span class="process-math">\(q(x)=(x-4)^5\)</span> will be different from the graph of <span class="process-math">\(p(x)=x^5\text{.}\)</span>
+</div></li>
+</ol>
+</div></li>
+<li id="li-126"><div class="para logical" id="p-30">
+<div class="para">The role of <span class="process-math">\(k\text{:}\)</span> (Remember to reset <span class="process-math">\(h=0\)</span> and <span class="process-math">\(k=0\)</span>)</div>
+<ol class="lower-alpha">
+<li id="li-127"><div class="para" id="p-derived-li-127">What happens as <span class="process-math">\(k\)</span> increases from <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+<li id="li-128"><div class="para" id="p-derived-li-128">What happens as <span class="process-math">\(k\)</span> decreases from <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+<li id="li-129"><div class="para" id="p-derived-li-129">Describes in words how different values of <span class="process-math">\(k\)</span> affect the graph of the function <span class="process-math">\(g(x)\text{.}\)</span>
+</div></li>
+<li id="li-130"><div class="para" id="p-derived-li-130">Without graphing, predict how the graph of <span class="process-math">\(q(x)=x^5-4\)</span> will be different from the graph of <span class="process-math">\(p(x)=x^5\text{.}\)</span>
+</div></li>
+</ol>
+</div></li>
+</ol></article><div class="para" id="p-31">The role that <span class="process-math">\(h\)</span> and <span class="process-math">\(k\)</span> play can be summarized as horizontal and vertical shifts. Now we look at a different set of transformations.</div>
+<article class="proposition theorem-like" id="proposition-36"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">5.2</span><span class="period">.</span>
+</h3>Given a function <span class="process-math">\(f(x)=e^x\text{.}\)</span> <ol class="decimal">
+<li id="li-131"><div class="para" id="p-derived-li-131">Write down the function formula for two new functions <span class="process-math">\(g(x) = f(-x)\)</span> and <span class="process-math">\(h(x) = -f(x)\text{.}\)</span>
+</div></li>
+<li id="li-132"><div class="para" id="p-derived-li-132">Go to the link <a class="external" href="https://www.desmos.com/calculator/r5bvx2qhjr" target="_blank">https://www.desmos.com/calculator/r5bvx2qhjr</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 2 </sup></a>.Turn on the graphs of <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> in Desmos. How would you describe the procedure that obtains the graph of <span class="process-math">\(g(x)\)</span> from the graph of <span class="process-math">\(f(x)\text{?}\)</span>
+</div></li>
+<li id="li-133"><div class="para" id="p-derived-li-133">Turn on the graphs of <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(h(x)\)</span> in Desmos. How would you describe the procedure that obtains the graph of <span class="process-math">\(h(x)\)</span> from the graph of <span class="process-math">\(f(x)\text{?}\)</span>
+</div></li>
+</ol></article><div class="para" id="p-32">Shifts and reflections are called rigid transformations because the shape of the graph does not change. We now move to non-rigid transformations. But before that, we introduce a new function called the step function. The step function <span class="process-math">\(f(x) = \lfloor x \rfloor\)</span> is defined to be the greatest integer less than or equal to <span class="process-math">\(x\text{.}\)</span> The step function is also called the floor function.</div>
+<article class="proposition theorem-like" id="proposition-37"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">5.3</span><span class="period">.</span>
+</h3>Find <span class="process-math">\(\lfloor 1.5 \rfloor\text{,}\)</span> <span class="process-math">\(\lfloor -1.5 \rfloor\)</span> and <span class="process-math">\(\lfloor -10 \rfloor\text{.}\)</span></article><article class="proposition theorem-like" id="proposition-38"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">5.4</span><span class="period">.</span>
+</h3>Given a function <span class="process-math">\(f(x)=\lfloor x \rfloor\)</span> and two real numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> <ol class="decimal">
+<li id="li-134"><div class="para" id="p-derived-li-134">Write down the function formula for a new function <span class="process-math">\(g(x) = af(bx)\text{.}\)</span>
+</div></li>
+<li id="li-135"><div class="para" id="p-derived-li-135">Go to the link <a class="external" href="https://www.desmos.com/calculator/qwuu0dswwf" target="_blank">https://www.desmos.com/calculator/qwuu0dswwf</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 3 </sup></a>. Begin by setting <span class="process-math">\(a = 1\)</span> and <span class="process-math">\(b = 1\text{.}\)</span>
+</div></li>
+<li id="li-136"><div class="para logical" id="p-33">
+<div class="para">The role of <span class="process-math">\(a\text{:}\)</span>
+</div>
+<ol class="lower-alpha">
+<li id="li-137"><div class="para" id="p-derived-li-137">What happens as <span class="process-math">\(a\)</span> increases from <span class="process-math">\(1\text{?}\)</span>
+</div></li>
+<li id="li-138"><div class="para" id="p-derived-li-138">What happens as <span class="process-math">\(a\)</span> decreases from <span class="process-math">\(1\)</span> to <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+<li id="li-139"><div class="para" id="p-derived-li-139">What happen when <span class="process-math">\(a = -1\text{?}\)</span>
+</div></li>
+<li id="li-140"><div class="para" id="p-derived-li-140">What happen as <span class="process-math">\(a\)</span> increases from <span class="process-math">\(-1\)</span> to <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+<li id="li-141"><div class="para" id="p-derived-li-141">What happen as <span class="process-math">\(a\)</span> decreases from <span class="process-math">\(-1\text{?}\)</span>
+</div></li>
+<li id="li-142"><div class="para" id="p-derived-li-142">Without graphing, predict how the graph of <span class="process-math">\(q(x)=-4x^5\)</span> will be different from the graph of <span class="process-math">\(p(x)=x^5\text{.}\)</span>
+</div></li>
+</ol>
+</div></li>
+<li id="li-143"><div class="para logical" id="p-34">
+<div class="para">The role of <span class="process-math">\(b\text{:}\)</span> (Remember to reset <span class="process-math">\(a=1\)</span> and <span class="process-math">\(b=1\)</span>)</div>
+<ol class="lower-alpha">
+<li id="li-144"><div class="para" id="p-derived-li-144">What happens as <span class="process-math">\(b\)</span> increases from <span class="process-math">\(1\text{?}\)</span>
+</div></li>
+<li id="li-145"><div class="para" id="p-derived-li-145">What happens as <span class="process-math">\(b\)</span> decreases from <span class="process-math">\(1\)</span> to <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+<li id="li-146"><div class="para" id="p-derived-li-146">What happen when <span class="process-math">\(b = -1\text{?}\)</span>
+</div></li>
+<li id="li-147"><div class="para" id="p-derived-li-147">What happen as <span class="process-math">\(b\)</span> increases from <span class="process-math">\(-1\)</span> to <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+<li id="li-148"><div class="para" id="p-derived-li-148">What happen as <span class="process-math">\(b\)</span> decreases from <span class="process-math">\(-1\text{?}\)</span>
+</div></li>
+<li id="li-149"><div class="para" id="p-derived-li-149">Without graphing, predict how the graph of <span class="process-math">\(q(x)=(-4x)^5\)</span> will be different from the graph of <span class="process-math">\(p(x)=x^5\text{.}\)</span>
+</div></li>
+</ol>
+</div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-39"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">5.5</span><span class="period">.</span>
+</h3>Given any function <span class="process-math">\(f(x)\text{,}\)</span> describe how the graph of each function below will differ from the graph of <span class="process-math">\(f(x)\text{.}\)</span> Try not to use any specific function equations to answer this question but if you are stuck, take <span class="process-math">\(f(x)=x^2\)</span> and experiment it using Desmos. <ol class="decimal">
+<li id="li-150"><div class="para" id="p-derived-li-150"><span class="process-math">\(\displaystyle 3f(x-2)\)</span></div></li>
+<li id="li-151"><div class="para" id="p-derived-li-151"><span class="process-math">\(\displaystyle f(3(x-2))\)</span></div></li>
+<li id="li-152"><div class="para" id="p-derived-li-152"><span class="process-math">\(\displaystyle -3f(x+2)-5\)</span></div></li>
+<li id="li-153"><div class="para" id="p-derived-li-153"><span class="process-math">\(\displaystyle 3f(-3(x-2))-7\)</span></div></li>
+<li id="li-154"><div class="para" id="p-derived-li-154"><span class="process-math">\(\displaystyle 5f(3(x+2))+7\)</span></div></li>
+</ol></article><div class="para logical" id="p-35">
+<div class="para">A rational function is a quotient of polynomial functions that can be written as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) = \frac{P(x)}{Q(x)}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(P(x), Q(x)\)</span> are polynomials and <span class="process-math">\(Q(x)\)</span> is not the zero polynomial. The domain of a rational function of <span class="process-math">\(x\)</span> includes all real numbers except for a few <span class="process-math">\(x\)</span>-values that make the denominator zero.</div>
+</div>
+<article class="proposition theorem-like" id="proposition-40"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">5.6</span><span class="period">.</span>
+</h3>
+<ol class="decimal">
+<li id="li-155"><div class="para" id="p-derived-li-155">Find the domain and the range of <span class="process-math">\(f(x) = \frac{1}{x}\text{.}\)</span>
+</div></li>
+<li id="li-156"><div class="para" id="p-36">Fill in the table <figure class="table table-like" id="table-3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.7<span class="period">.</span></span><span class="space"> </span>Values of <span class="process-math">\(f(x)\)</span> when <span class="process-math">\(x \to 0\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r0 l0 t2 lines"><span class="process-math">\(x\)</span></td>
+<td class="c m b2 r0 l0 t2 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t2 lines"><span class="process-math">\(0.1\)</span></td>
+<td class="c m b2 r0 l0 t2 lines"><span class="process-math">\(0.01\)</span></td>
+<td class="c m b2 r0 l0 t2 lines"><span class="process-math">\(0.001\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+</table></div></figure> Create a similar table for <span class="process-math">\(x\)</span> approaching to <span class="process-math">\(0\)</span> from the negative side. Where do you think <span class="process-math">\(f(x)\)</span> approaches to when <span class="process-math">\(x \to 0\text{?}\)</span>
+</div></li>
+<li id="li-157"><div class="para" id="p-37">Fill in the table <figure class="table table-like" id="table-4"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.8<span class="period">.</span></span><span class="space"> </span>Values of <span class="process-math">\(f(x)\)</span> when <span class="process-math">\(x \to +\infty\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r0 l0 t2 lines"><span class="process-math">\(x\)</span></td>
+<td class="c m b2 r0 l0 t2 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t2 lines"><span class="process-math">\(10\)</span></td>
+<td class="c m b2 r0 l0 t2 lines"><span class="process-math">\(100\)</span></td>
+<td class="c m b2 r0 l0 t2 lines"><span class="process-math">\(1000\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+</table></div></figure>Where do you think <span class="process-math">\(f(x)\)</span> approaches to when <span class="process-math">\(x \to +\infty\text{?}\)</span> What about <span class="process-math">\(-\infty\text{?}\)</span>
+</div></li>
+</ol></article><article class="definition definition-like" id="definition-4"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.9</span><span class="period">.</span>
+</h3>We say that the line <span class="process-math">\(x=a\)</span> is a vertical asymptote of the graph of <span class="process-math">\(f\)</span> when <span class="process-math">\(f(x) \to \infty\)</span> or <span class="process-math">\(f(x) \to -\infty\)</span> as <span class="process-math">\(x \to a\text{,}\)</span> either from the right or from the left. We say that the line <span class="process-math">\(y=b\)</span> is a horizontal asymptote of the graph of <span class="process-math">\(f\)</span> when <span class="process-math">\(f(x) \to b\)</span> as <span class="process-math">\(x \to +\infty\)</span> or <span class="process-math">\(x \to -\infty\text{.}\)</span></article><article class="proposition theorem-like" id="proposition-41"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">5.10</span><span class="period">.</span>
+</h3>Let <span class="process-math">\(f(x) = \frac{2x^2}{x^2-1}\text{.}\)</span> <ol class="decimal">
+<li id="li-158"><div class="para" id="p-derived-li-158">Find the domain and the range of <span class="process-math">\(f(x)\text{.}\)</span>
+</div></li>
+<li id="li-159"><div class="para" id="p-derived-li-159">Find all the vertical and horizontal asymptotes of <span class="process-math">\(f(x)\text{.}\)</span>
+</div></li>
+<li id="li-160"><div class="para" id="p-derived-li-160">Find the intervals that <span class="process-math">\(f(x)\)</span> is increasing and the intervals that <span class="process-math">\(f(x)\)</span> is decreasing.</div></li>
+<li id="li-161"><div class="para" id="p-derived-li-161">What is the average rate of change for <span class="process-math">\(3 \lt x \lt 6\text{?}\)</span>
+</div></li>
+<li id="li-162"><div class="para" id="p-derived-li-162">Solve the inequality <span class="process-math">\(f(x) \gt 3\text{.}\)</span>
+</div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-42"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">5.11</span><span class="period">.</span>
+</h3>Let <span class="process-math">\(f(x) = \frac{x^2+x-2}{x^2-x-6}\text{.}\)</span> <ol class="decimal">
+<li id="li-163"><div class="para" id="p-derived-li-163">Find the domain and the range of <span class="process-math">\(f(x)\text{.}\)</span>
+</div></li>
+<li id="li-164"><div class="para" id="p-derived-li-164">Find all the vertical and horizontal asymptotes of <span class="process-math">\(f(x)\text{.}\)</span>
+</div></li>
+<li id="li-165"><div class="para" id="p-derived-li-165">Find the intervals that <span class="process-math">\(f(x)\)</span> is increasing and the intervals that <span class="process-math">\(f(x)\)</span> is decreasing.</div></li>
+<li id="li-166"><div class="para" id="p-derived-li-166">What is the average rate of change for <span class="process-math">\(4 \lt x \lt 8\text{?}\)</span>
+</div></li>
+<li id="li-167"><div class="para" id="p-derived-li-167">Solve the inequality <span class="process-math">\(f(x) \gt 6\text{.}\)</span>
+</div></li>
+</ol></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">www.desmos.com/calculator/z82wdytmxl</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">www.desmos.com/calculator/r5bvx2qhjr</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">www.desmos.com/calculator/qwuu0dswwf</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-log.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-trig.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

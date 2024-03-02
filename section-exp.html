@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exponential Functions and Their Modeling</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href="http://www.utica.edu/faculty_staff/xixiao/" target="_blank"><img src="images/uc_logo.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="article-1.html"><span class="title">Precalculus</span></a></h1>
+<p class="byline"></p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="article-1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-log.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1"><ul class="structural">
+<li><div class="toc-item"><a href="section-linear.html" class="internal"><span class="codenumber">1</span> <span class="title">Linear Functions and Their Modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Quadratic Functions and their modeling</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="section-exp.html" class="internal"><span class="codenumber">3</span> <span class="title">Exponential Functions and Their Modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-log.html" class="internal"><span class="codenumber">4</span> <span class="title">Logarithmic Functions and Their Modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-misc.html" class="internal"><span class="codenumber">5</span> <span class="title">Function Transformations and Rational Functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-trig.html" class="internal"><span class="codenumber">6</span> <span class="title">Trigonometric Functions: Basics</span></a></div></li>
+<li><div class="toc-item"><a href="section-trig-adv.html" class="internal"><span class="codenumber">7</span> <span class="title">Trigonometric Functions: Additional Topics</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-exp"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3</span><span class="space"> </span><span class="title">Exponential Functions and Their Modeling</span>
+</h2>
+<article class="proposition theorem-like" id="proposition-8"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-8">If we start with a single yeast cell under favorable growth conditions, then it will divide in one hour to form two identical "daughter cells". In turn, after another hour, each of these daughter cells will divide to produce two identical cells; we now have four identical "granddaughter cells" of the original parent cell. Under ideal conditions, this "doubling effect" will continue.</div> <ol class="decimal">
+<li id="li-49"><div class="para" id="p-derived-li-49">Create a table that contains the number of yeast cells <span class="process-math">\(N(t)\)</span> at any given hours between <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=8\text{.}\)</span>
+</div></li>
+<li id="li-50"><div class="para" id="p-derived-li-50">How many yeast cells are there when <span class="process-math">\(t=100\text{?}\)</span> (If you are stuck with this question or it takes too long, move on to the next question and then come back to this one later.)</div></li>
+<li id="li-51"><div class="para" id="p-derived-li-51">Write a function equation of the number of yeast cells <span class="process-math">\(N(t)\)</span> in terms of the hours <span class="process-math">\(t\text{.}\)</span>
+</div></li>
+<li id="li-52"><div class="para" id="p-derived-li-52">If you were not able to answer Question 2, can you answer that question now using the function equation from Question 3?</div></li>
+</ol></article><div class="para" id="p-9">The function that models the number of yeast cells in terms of time is called an exponential function. In general, an <em class="emphasis">exponential function</em> is a function of the form <span class="process-math">\(f(x)=b^x\)</span> where <span class="process-math">\(b\gt0\text{.}\)</span> Here <span class="process-math">\(b\)</span> is called the base and <span class="process-math">\(x\)</span> is called the exponent. Let us first explore some properties of exponentials.</div>
+<article class="proposition theorem-like" id="proposition-9"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">3.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-10">Consider three expressions that involve exponential functions <span class="process-math">\(2^x \times 3^y\text{,}\)</span> <span class="process-math">\((2 \times 3)^{xy}\text{,}\)</span> <span class="process-math">\((2 \times 3)^{x+y}\text{.}\)</span> By plugging in pairs of values for <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> decide whether any of these three expressions are the same or not.</div></article><article class="proposition theorem-like" id="proposition-10"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">3.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-11">Consider three expressions that involve exponential functions <span class="process-math">\(2^x \times 2^y\text{,}\)</span> <span class="process-math">\(2^{xy}\text{,}\)</span> <span class="process-math">\(2^{x+y}\text{.}\)</span> By plugging in pairs of values for <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> decide whether any of these three expressions are the same or not.</div></article><article class="proposition theorem-like" id="proposition-11"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">3.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-12">Consider three expressions that involve exponential functions <span class="process-math">\(2^x \times 3^x\text{,}\)</span> <span class="process-math">\((2 \times 3)^{x}\text{,}\)</span> <span class="process-math">\((2 + 3)^{x+x}\text{.}\)</span> By plugging in value for <span class="process-math">\(x\text{,}\)</span> decide whether any of these three expressions are the same or not.</div></article><article class="proposition theorem-like" id="proposition-12"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">3.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-13">Consider three expressions that involve exponential functions <span class="process-math">\((2^x)^y\text{,}\)</span> <span class="process-math">\(2^{x+y}\text{,}\)</span> <span class="process-math">\(2^{xy}\text{.}\)</span> By plugging in pairs of values for <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> decide whether any of these three expressions are the same or not.</div></article><div class="para logical" id="p-14">
+<div class="para">Let us recall that for any <span class="process-math">\(b \gt 0\text{,}\)</span> we have <span class="process-math">\(b^0=1\text{,}\)</span> <span class="process-math">\(b^{-1} = \frac{1}{b}\text{.}\)</span> Let <span class="process-math">\(\frac{p}{q}\)</span> be a rational number where <span class="process-math">\(q \gt 0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b^{\frac{p}{q}} = \sqrt[q]{b^p}.
+\end{equation*}
+</div>
+</div>
+<article class="proposition theorem-like" id="proposition-13"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">3.6</span><span class="period">.</span>
+</h3>Calculate the following exponentials without using calculators: <ol class="decimal">
+<li id="li-53"><div class="para" id="p-derived-li-53"><span class="process-math">\(\displaystyle 3^{-2}\)</span></div></li>
+<li id="li-54"><div class="para" id="p-derived-li-54"><span class="process-math">\(\displaystyle 8^{2/3}\)</span></div></li>
+<li id="li-55"><div class="para" id="p-derived-li-55"><span class="process-math">\(\displaystyle 4^{-3/2}\)</span></div></li>
+<li id="li-56"><div class="para" id="p-derived-li-56"><span class="process-math">\(\displaystyle 27^{-4/3}\)</span></div></li>
+</ol></article><div class="para" id="p-15">In application, exponential functions have a lot of limitations in many cases due to its simple nature. Instead, we use functions of exponential type. A function of exponential type is of the form <span class="process-math">\(f(x) = a \times b^x\)</span> where <span class="process-math">\(a \neq 0\)</span> and <span class="process-math">\(b \gt 0 \text{.}\)</span>
+</div>
+<article class="proposition theorem-like" id="proposition-14"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">3.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-16">Let us re-consider the yeast cell growth problem. This time, we will start with three yeast cells instead of one.</div> <ol class="decimal">
+<li id="li-57"><div class="para" id="p-derived-li-57">Create a table that contains the number of yeast cells <span class="process-math">\(M(t)\)</span> at any given hours between <span class="process-math">\(t=0\)</span> and <span class="process-math">\(t=8\text{.}\)</span>
+</div></li>
+<li id="li-58"><div class="para" id="p-derived-li-58">Can you use an exponential function to model this yeast cell growth problem?</div></li>
+<li id="li-59"><div class="para" id="p-derived-li-59">Now model this problem using a function of exponential type. Write a function equation of the number of yeast cells <span class="process-math">\(M(t)\)</span> in terms of the hours <span class="process-math">\(t\text{.}\)</span>
+</div></li>
+<li id="li-60"><div class="para" id="p-derived-li-60">What is the domain and the range of the function <span class="process-math">\(M(t)\text{.}\)</span>
+</div></li>
+<li id="li-61"><div class="para" id="p-derived-li-61">After how many hours will the number of yeast cells be exactly <span class="process-math">\(98304\text{?}\)</span>
+</div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-15"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">3.8</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-17">Pam opens an investment account at Vanguard with <span class="process-math">\($10,000\text{.}\)</span> The account earns approximately <span class="process-math">\(6.5\%\)</span> compounded annually. Let <span class="process-math">\(t\)</span> be the number of years the account has been open, and <span class="process-math">\(B(t)\)</span> the balance in the account.</div> <ol class="decimal">
+<li id="li-62"><div class="para" id="p-derived-li-62">Make a table showing the balance, <span class="process-math">\(B(t)\text{,}\)</span> in the account at <span class="process-math">\(t=0,1,2,3,\)</span> and <span class="process-math">\(4\)</span> years.</div></li>
+<li id="li-63"><div class="para" id="p-derived-li-63">Write a function equation for the function <span class="process-math">\(B(t)\text{.}\)</span>
+</div></li>
+<li id="li-64"><div class="para" id="p-derived-li-64">What is the domain and the range of the function <span class="process-math">\(B(t)\text{?}\)</span>
+</div></li>
+<li id="li-65"><div class="para" id="p-derived-li-65">Use your function equation to determine the balance in <span class="process-math">\(20\)</span> years.</div></li>
+<li id="li-66"><div class="para" id="p-derived-li-66">For the balance of the account to reach <span class="process-math">\($100,000\text{,}\)</span> at least how many years should Pam wait?</div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-16"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-18">The population of a small town has been growing. The population is shown in the following table.</div> <figure class="table table-like" id="table-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.10<span class="period">.</span></span><span class="space"> </span>Population of a small town</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r0 l0 t2 lines">
+<span class="process-math">\(t\)</span> (years since 1980)</td>
+<td class="c m b2 r0 l0 t2 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r0 l0 t2 lines"><span class="process-math">\(10\)</span></td>
+<td class="c m b2 r0 l0 t2 lines"><span class="process-math">\(20\)</span></td>
+<td class="c m b2 r0 l0 t2 lines"><span class="process-math">\(30\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines">Population <span class="process-math">\(P(t)\)</span>
+</td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2,354\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3,164\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(4,252\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(5,714\)</span></td>
+</tr>
+</table></div></figure> <ol class="decimal">
+<li id="li-67"><div class="para" id="p-derived-li-67">What is the average number of people added to the town per year between 1980 and 2010?</div></li>
+<li id="li-68"><div class="para" id="p-derived-li-68">Assuming that the population continues to grow exponentially, write a function equation for <span class="process-math">\(P(t)\text{.}\)</span>
+</div></li>
+<li id="li-69"><div class="para" id="p-derived-li-69">If the population continues to grow according to the model, what is the population in 2015?</div></li>
+<li id="li-70"><div class="para" id="p-derived-li-70">When will the population reach 10,000?</div></li>
+<li id="li-71"><div class="para" id="p-derived-li-71">The gross domestic product (GDP) per capita of this small town in the year 1980 is <span class="process-math">\($83,145\)</span> and has been increased at the rate of <span class="process-math">\(3.4\%\)</span> every year since then. Write a function equation for the GDP per capita <span class="process-math">\(G(t)\)</span> in terms of time <span class="process-math">\(t\)</span> in years.</div></li>
+<li id="li-72"><div class="para" id="p-derived-li-72">Write a function equation for the total GDP of this small town <span class="process-math">\(H(t)\)</span> in terms of time <span class="process-math">\(t\)</span> in years. Simplify the function equation as much as you can.</div></li>
+<li id="li-73"><div class="para" id="p-derived-li-73">When will the total GDP of this small town reach one billion dollars?</div></li>
+<li id="li-74"><div class="para" id="p-derived-li-74">Suppose that <span class="process-math">\(3\%\)</span> of the annual GDP is spent on infrastructure. How much will be spent on infrastructure in this town in the year 2019?</div></li>
+</ol></article><div class="para logical" id="p-19">
+<div class="para">The Newton’s Law of Cooling (Warming) describes the principle of the heat loss of a body to its surroundings provided the temperature difference is small and the nature of radiating surface remains same. The temperature <span class="process-math">\(T\)</span> of an object at time <span class="process-math">\(t\)</span> is given by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T(t)=T_a+(T_0 −T_a)e^{−kt}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(T(0) = T_0\)</span> is the initial temperature of the object, <span class="process-math">\(T_a\)</span> is the ambient temperature and <span class="process-math">\(k \gt 0\)</span> is a constant that depends on the object. The letter <span class="process-math">\(e\)</span> represents a number that is often used as the base in exponential functions because it has a number of special properties (you will learn more about this in calculus). The value of the number <span class="process-math">\(e\)</span> is approximately <span class="process-math">\(2.718\text{.}\)</span>
+</div>
+</div>
+<article class="proposition theorem-like" id="proposition-17"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">3.11</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-20">A <span class="process-math">\(40^{\circ}\)</span>F roast is cooked in a <span class="process-math">\(350^{\circ}\)</span>F oven. After <span class="process-math">\(2\)</span> hours, the temperature of the roast is <span class="process-math">\(125^{\circ}\)</span>F.</div> <ol class="decimal">
+<li id="li-75"><div class="para" id="p-derived-li-75">Assuming the temperature of the roast follows Newton’s Law of Warming, find a formula for the temperature of the roast <span class="process-math">\(T(t)\)</span> as a function of its time in the oven, <span class="process-math">\(t\text{,}\)</span> in hours.</div></li>
+<li id="li-76"><div class="para" id="p-derived-li-76">The roast is done when the internal temperature reaches <span class="process-math">\(165^{\circ}\)</span>F. When will the roast be done?</div></li>
+</ol></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-log.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

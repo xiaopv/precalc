@@ -1,0 +1,23 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+
+			\usepackage{tikz}       
+		\ifdefined\tikzset
+    \tikzset{ampersand replacement = \amp}
+\fi
+
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+\begin{document}
+\pagestyle{empty}
+
+						\begin{tikzpicture}
+							\draw [thick] (0,0) circle (3cm);
+							\draw [thick ->] (-3.5,0) -- (3.5,0) node[right] {$x$};
+							\draw [thick ->] (0,-3.5) -- (0,3.5) node[right] {$y$};
+							\draw (0,0) --  (1.5,2.6) node[above] {$(x,y)$};
+							\draw (1.5,0) -- (1.5,2.6);
+							\draw (0,0.2) -- (0,0.2) node[right] {$\alpha$};
+						\end{tikzpicture}
+					\end{document}

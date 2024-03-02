@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Trigonometric Functions: Additional Topics</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href="http://www.utica.edu/faculty_staff/xixiao/" target="_blank"><img src="images/uc_logo.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="article-1.html"><span class="title">Precalculus</span></a></h1>
+<p class="byline"></p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-trig.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="article-1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1"><ul class="structural">
+<li><div class="toc-item"><a href="section-linear.html" class="internal"><span class="codenumber">1</span> <span class="title">Linear Functions and Their Modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Quadratic Functions and their modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-exp.html" class="internal"><span class="codenumber">3</span> <span class="title">Exponential Functions and Their Modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-log.html" class="internal"><span class="codenumber">4</span> <span class="title">Logarithmic Functions and Their Modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-misc.html" class="internal"><span class="codenumber">5</span> <span class="title">Function Transformations and Rational Functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-trig.html" class="internal"><span class="codenumber">6</span> <span class="title">Trigonometric Functions: Basics</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="section-trig-adv.html" class="internal"><span class="codenumber">7</span> <span class="title">Trigonometric Functions: Additional Topics</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="section-trig-adv"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">7</span><span class="space"> </span><span class="title">Trigonometric Functions: Additional Topics</span>
+</h2>
+<div class="para" id="p-47">We start this section by investigating graphs of trigonometric functions. The following is the graph of <span class="process-math">\(y=\sin(x)\)</span>
+</div>
+<figure class="figure figure-like" id="graph-sin"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-9.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-48">Note that the maximum value of the sine curve can take is <span class="process-math">\(1\)</span> and the minimum value is <span class="process-math">\(-1\text{.}\)</span> The range of the sine function is <span class="process-math">\([-1,1]\text{.}\)</span> The amplitude represents half the distance between the maximum and minimum values of the function and thus it is equal to <span class="process-math">\(1\text{.}\)</span>
+</div>
+<article class="proposition theorem-like" id="proposition-57"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.2</span><span class="period">.</span>
+</h3>We will investigate how the variable <span class="process-math">\(a\)</span> in the general form<div class="displaymath process-math">
+\begin{equation*}
+y=a\sin(b(x-h))+k
+\end{equation*}
+</div>will affect the amplitude of the sine curve. Go to the link <a class="external" href="https://www.desmos.com/calculator/qsvc9fflcg" target="_blank">https://www.desmos.com/calculator/qsvc9fflcg</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a>. <ol class="decimal">
+<li id="li-192"><div class="para" id="p-derived-li-192">What happens as <span class="process-math">\(a\)</span> increases from <span class="process-math">\(1\text{?}\)</span>
+</div></li>
+<li id="li-193"><div class="para" id="p-derived-li-193">What happens as <span class="process-math">\(a\)</span> decreases from <span class="process-math">\(1\)</span> to <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+<li id="li-194"><div class="para" id="p-derived-li-194">What is the relationship between <span class="process-math">\(a\)</span> and the amplitude?</div></li>
+</ol></article><div class="para" id="p-49">The mid-line of the sine curve is the horizontal line that runs exactly in the middle of the maximum and the minimum of the curve. Thus the mid-line is <span class="process-math">\(y=0\text{.}\)</span>
+</div>
+<article class="proposition theorem-like" id="proposition-58"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.3</span><span class="period">.</span>
+</h3>We will investigate how the variable <span class="process-math">\(k\)</span> in the general form<div class="displaymath process-math">
+\begin{equation*}
+y=a\sin(b(x-h))+k
+\end{equation*}
+</div>will affect the midline of the sine curve. Go to the link <a class="external" href="https://www.desmos.com/calculator/qsvc9fflcg" target="_blank">https://www.desmos.com/calculator/qsvc9fflcg</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 2 </sup></a>. <ol class="decimal">
+<li id="li-195"><div class="para" id="p-derived-li-195">What happens as <span class="process-math">\(k\)</span> increases from <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+<li id="li-196"><div class="para" id="p-derived-li-196">What happens as <span class="process-math">\(k\)</span> decreases from <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+<li id="li-197"><div class="para" id="p-derived-li-197">What is the relationship between <span class="process-math">\(k\)</span> and the midline?</div></li>
+</ol></article><div class="para" id="p-50">The period is the horizontal length of one cycle of the sine curve (such as from one peak to the next peak). The period of the sine curve is <span class="process-math">\(2\pi\text{.}\)</span>
+</div>
+<article class="proposition theorem-like" id="proposition-59"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.4</span><span class="period">.</span>
+</h3>We will investigate how the variable <span class="process-math">\(b\)</span> in the general form<div class="displaymath process-math">
+\begin{equation*}
+y=a\sin(b(x-h))+k
+\end{equation*}
+</div>will affect the mid-line of the sine curve. Go to the link <a class="external" href="https://www.desmos.com/calculator/qsvc9fflcg" target="_blank">https://www.desmos.com/calculator/qsvc9fflcg</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 3 </sup></a>. Fill in the following table: <figure class="table table-like" id="table-8"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">7.5<span class="period">.</span></span><span class="space"> </span>Relations between period and <span class="process-math">\(b\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t2 lines">Values of <span class="process-math">\(b\)</span>
+</td>
+<td class="c m b2 r0 l0 t2 lines">Period</td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\pi\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\frac{\pi}{2}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\frac{\pi}{4}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+</table></div></figure> You cannot directly see <span class="process-math">\(b\)</span> on the sine curve but <span class="process-math">\(b\)</span> does affects the period. Using the above table, can you come up with a formula that determines the period of the sine curve given the value of <span class="process-math">\(b\text{.}\)</span> In reverse, if you know the the period of the sine curve, how can you find the value of <span class="process-math">\(b\text{?}\)</span></article><article class="proposition theorem-like" id="proposition-60"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.6</span><span class="period">.</span>
+</h3>At the end, we will investigate how the variable <span class="process-math">\(h\)</span> in the general form<div class="displaymath process-math">
+\begin{equation*}
+y=a\sin(b(x-h))+k
+\end{equation*}
+</div>will affect the graph of the the sine curve. Go to the link <a class="external" href="https://www.desmos.com/calculator/qsvc9fflcg" target="_blank">https://www.desmos.com/calculator/qsvc9fflcg</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 4 </sup></a>. <ol class="decimal">
+<li id="li-198"><div class="para" id="p-derived-li-198">What happens as <span class="process-math">\(h\)</span> increases from <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+<li id="li-199"><div class="para" id="p-derived-li-199">What happens as <span class="process-math">\(k\)</span> decreases from <span class="process-math">\(0\text{?}\)</span>
+</div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-61"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span>
+</h3>Predict what each of the following graphs will look like and sketch by hand. <ol class="decimal">
+<li id="li-200"><div class="para" id="p-derived-li-200"><span class="process-math">\(y=14\sin(2\pi x)+4\text{.}\)</span></div></li>
+<li id="li-201"><div class="para" id="p-derived-li-201"><span class="process-math">\(y=-\frac{1}{2}\sin(\frac{\pi}{2}(x-1))+\frac{2}{3}\text{.}\)</span></div></li>
+</ol> Then Use Desmos to check your answer.</article><article class="proposition theorem-like" id="proposition-62"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.8</span><span class="period">.</span>
+</h3>Let us investigate the general form for the cosine form<div class="displaymath process-math">
+\begin{equation*}
+y=a\cos(b(x-h))+k.
+\end{equation*}
+</div>Go to the link <a class="external" href="https://www.desmos.com/calculator/mka32cuaa8" target="_blank">https://www.desmos.com/calculator/mka32cuaa8</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 5 </sup></a>. Find out the relationships between <span class="process-math">\(a,b,h,k\)</span> and the amplitude, the mid-line, the period and the horizontal shift of the cosine curve.</article><article class="proposition theorem-like" id="proposition-63"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.9</span><span class="period">.</span>
+</h3>The following graph is a graph of a trigonometric function. <figure class="figure figure-like" id="figure-10"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/trig-graph-problem.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <ol class="decimal">
+<li id="li-202"><div class="para" id="p-derived-li-202">Write a function equation for the function of the form <span class="process-math">\(a\sin(b(x-h))+k\text{.}\)</span>
+</div></li>
+<li id="li-203"><div class="para" id="p-derived-li-203">Write a function equation for the function of the form <span class="process-math">\(a\cos(b(x-h))+k\text{.}\)</span>
+</div></li>
+</ol></article><div class="para" id="p-51">We now move to discuss inverse trigonometric functions. We started with the inverse sine function.</div>
+<article class="definition definition-like" id="definition-5"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.11</span><span class="period">.</span>
+</h3>The inverse sine function <span class="process-math">\(y=\arcsin(x)\)</span> if <span class="process-math">\(\sin(y)=x\)</span> where <span class="process-math">\(-1 \leq x \leq 1\)</span> and <span class="process-math">\(-\frac{\pi}{2} \leq y \leq \frac{\pi}{2}\text{.}\)</span> The domain of <span class="process-math">\(y=\arcsin(x)\)</span> is <span class="process-math">\([-1,1]\text{,}\)</span> and the range is <span class="process-math">\([-\frac{\pi}{2},\frac{\pi}{2}]\text{.}\)</span></article><div class="para" id="p-52">The domain of the sine function is all real numbers and the range of the sine function is <span class="process-math">\([-1,1]\text{.}\)</span> Notice that the domain of the inverse sine function is <span class="process-math">\([-1,1]\)</span> but the range is <span class="process-math">\([-\frac{\pi}{2},\frac{\pi}{2}]\text{,}\)</span> not all real numbers.</div>
+<article class="proposition theorem-like" id="proposition-64"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.12</span><span class="period">.</span>
+</h3>Without using the calculator, evaluate each of the expressions: <span class="process-math">\(\arcsin(-\frac{1}{2})\text{,}\)</span> <span class="process-math">\(\arcsin(\frac{\sqrt{3}}{2})\text{,}\)</span> <span class="process-math">\(\arcsin(-2)\text{.}\)</span></article><article class="definition definition-like" id="definition-6"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.13</span><span class="period">.</span>
+</h3>The inverse cosine function <span class="process-math">\(y=\arccos(x)\)</span> if <span class="process-math">\(\cos(y)=x\)</span> where <span class="process-math">\(-1 \leq x \leq 1\)</span> and <span class="process-math">\(0 \leq y \leq \pi\text{.}\)</span> The domain of <span class="process-math">\(y=\arccos(x)\)</span> is <span class="process-math">\([-1,1]\text{,}\)</span> and the range is <span class="process-math">\([0,\pi]\text{.}\)</span> The inverse tangent function <span class="process-math">\(y=\arctan(x)\)</span> if <span class="process-math">\(\tan(y)=x\)</span> where <span class="process-math">\(-\infty \leq x \leq \infty\)</span> and <span class="process-math">\(-\frac{\pi}{2} \leq y \leq \frac{\pi}{2}\text{.}\)</span> The domain of <span class="process-math">\(y=\arctan(x)\)</span> is <span class="process-math">\((-\infty,\infty)\text{,}\)</span> and the range is <span class="process-math">\([-\frac{\pi}{2},\frac{\pi}{2}]\text{.}\)</span></article><article class="proposition theorem-like" id="proposition-65"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.14</span><span class="period">.</span>
+</h3>Without using the calculator, evaluate each of the expressions: <span class="process-math">\(\arccos(\frac{\sqrt{2}}{2})\text{,}\)</span> <span class="process-math">\(\arctan(0)\text{,}\)</span> <span class="process-math">\(\arctan(-1)\text{.}\)</span></article><div class="para" id="p-53">Recall that for any function <span class="process-math">\(f\)</span> that has an inverse function <span class="process-math">\(f^{-1}\text{,}\)</span> we have <span class="process-math">\(f(f^{-1}(x))=x\)</span> and <span class="process-math">\(f^{-1}(f(x))=x\text{.}\)</span> One caveat is that these formulas are only true if <span class="process-math">\(x\)</span> is the correct domain.</div>
+<article class="proposition theorem-like" id="proposition-66"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.15</span><span class="period">.</span>
+</h3>If possible, find the exact value of each expression. <ol class="decimal">
+<li id="li-204"><div class="para" id="p-derived-li-204"><span class="process-math">\(\displaystyle \tan(\arctan(-5))\)</span></div></li>
+<li id="li-205"><div class="para" id="p-derived-li-205"><span class="process-math">\(\displaystyle \arcsin(\sin(\frac{5\pi}{3}))\)</span></div></li>
+<li id="li-206"><div class="para" id="p-derived-li-206"><span class="process-math">\(\displaystyle \cos(\arccos(\pi))\)</span></div></li>
+</ol></article><div class="para" id="p-54">Now we look at how to evaluate compositions of trigonometric functions and inverse trigonometric functions that are not of the same origins.</div>
+<article class="proposition theorem-like" id="proposition-67"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.16</span><span class="period">.</span>
+</h3>Let us find the exact value of the expression <span class="process-math">\(\tan(\arccos\frac{2}{3})\text{.}\)</span> <ol class="decimal">
+<li id="li-207"><div class="para" id="p-derived-li-207">First, let us call <span class="process-math">\(\arccos(\frac{2}{3})=\alpha\text{.}\)</span> Create a right triangle such that one of the non-right triangles is <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\cos(\alpha)=\frac{2}{3}\text{.}\)</span>
+</div></li>
+<li id="li-208"><div class="para" id="p-derived-li-208">Second, find out the value of <span class="process-math">\(\tan(\alpha)\text{.}\)</span>
+</div></li>
+<li id="li-209"><div class="para" id="p-derived-li-209">Third, find out the value of <span class="process-math">\(\tan(\arccos\frac{2}{3})\text{.}\)</span>
+</div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-68"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.17</span><span class="period">.</span>
+</h3>Find the exact value of <span class="process-math">\(\cos(\arcsin(-\frac{3}{5}))\text{.}\)</span></article><div class="para" id="p-55">Note that by the definition of the basic six trigonometric functions, we have <span class="process-math">\(\cot(x) = \frac{1}{\tan(x)}\text{,}\)</span> <span class="process-math">\(\sec(x) = \frac{1}{\cos(x)}\text{,}\)</span> and <span class="process-math">\(\csc(x) = \frac{1}{\sin(x)}\text{.}\)</span> These relationships between trigonometric functions are called trigonometric identities. Here "identities" stands for "equalities". Note that a trigonometric identity involves trigonometric functions of an arbitrary angle and not a specific angle. As a counterexample, <span class="process-math">\(\sin(\frac{\pi}{2}) = 1\)</span> is not a trigonometric identity because it is about one specific angle <span class="process-math">\(\frac{\pi}{2}\text{.}\)</span> The big question is that are there any other identities. How do we find out?</div>
+<article class="proposition theorem-like" id="proposition-69"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.18</span><span class="period">.</span>
+</h3>
+<ol class="decimal">
+<li id="li-210"><div class="para" id="p-derived-li-210">Look at <a href="" class="xref" data-knowl="./knowl/problem-verifysimpletrigid.html" title="Task 6.11">Task 6.11</a>. Can you find some trigonometric identities? If so, write down the trigonometric identities.</div></li>
+<li id="li-211"><div class="para" id="p-derived-li-211">Now look at the trigonometric identities that you discovered in the last part, replace the trigonometric functions in the trigonometric identities with the definition of the trigonometric functions. (If you don’t remember the definition, go back to the last unit to review them.) Then try to justify that the trigonometric identities are true. (This is called a proof!)</div></li>
+</ol></article><div class="para" id="p-56">In order to prove a trigonometric identity, we can use other trigonometric identities that have been established. The more identities that we have established, the larger our toolbox will be. When trying to prove a trigonometric identity, start working with the side that is more than complicated than the other. This allows you to manipulate the expression using algebra to get the simpler form.</div>
+<article class="proposition theorem-like" id="proposition-70"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.19</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-57">
+<div class="para">Prove the identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tan(x)\csc(x) = \sec(x)\text{.}
+\end{equation*}
+</div>
+</div></article><article class="proposition theorem-like" id="proposition-71"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.20</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-58">
+<div class="para">Prove the identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\sec^2(\theta)-1}{\sec^2(\theta)} = \sin^2(\theta)\text{.}
+\end{equation*}
+</div>
+</div></article><article class="proposition theorem-like" id="proposition-72"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.21</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-59">
+<div class="para">Prove the identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\sin^2(\theta)+\cos^2(\theta)}{\cos^2(\theta)\sec^2(\theta)} = 1\text{.}
+\end{equation*}
+</div>
+</div></article><article class="proposition theorem-like" id="proposition-73"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.22</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-60">
+<div class="para">Prove the identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\tan^2(x)+1)(\cos^2(x)-1)=-\tan^2(x)\text{.}
+\end{equation*}
+</div>
+</div></article><article class="proposition theorem-like" id="proposition-74"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.23</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-61">
+<div class="para">Prove the identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tan(x)+\cot(x)=\sec(x)\csc(x)\text{.}
+\end{equation*}
+</div>
+</div></article><article class="proposition theorem-like" id="proposition-75"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.24</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-62">
+<div class="para">Prove the identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\cot^2(\theta)}{1+\csc(\theta)} = \frac{1 - \sin(\theta)}{\sin(\theta)}\text{.}
+\end{equation*}
+</div>
+</div></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">www.desmos.com/calculator/qsvc9fflcg</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">www.desmos.com/calculator/qsvc9fflcg</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn"><code class="code-inline tex2jax_ignore">www.desmos.com/calculator/qsvc9fflcg</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn"><code class="code-inline tex2jax_ignore">www.desmos.com/calculator/qsvc9fflcg</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn"><code class="code-inline tex2jax_ignore">www.desmos.com/calculator/mka32cuaa8</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-trig.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

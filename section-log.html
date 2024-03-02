@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Logarithmic Functions and Their Modeling</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href="http://www.utica.edu/faculty_staff/xixiao/" target="_blank"><img src="images/uc_logo.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="article-1.html"><span class="title">Precalculus</span></a></h1>
+<p class="byline"></p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-exp.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="article-1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-misc.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1"><ul class="structural">
+<li><div class="toc-item"><a href="section-linear.html" class="internal"><span class="codenumber">1</span> <span class="title">Linear Functions and Their Modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Quadratic Functions and their modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-exp.html" class="internal"><span class="codenumber">3</span> <span class="title">Exponential Functions and Their Modeling</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="section-log.html" class="internal"><span class="codenumber">4</span> <span class="title">Logarithmic Functions and Their Modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-misc.html" class="internal"><span class="codenumber">5</span> <span class="title">Function Transformations and Rational Functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-trig.html" class="internal"><span class="codenumber">6</span> <span class="title">Trigonometric Functions: Basics</span></a></div></li>
+<li><div class="toc-item"><a href="section-trig-adv.html" class="internal"><span class="codenumber">7</span> <span class="title">Trigonometric Functions: Additional Topics</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="section-log"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4</span><span class="space"> </span><span class="title">Logarithmic Functions and Their Modeling</span>
+</h2>
+<article class="proposition theorem-like" id="proposition-18"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
+</h3>Recall that to build the edge of an <span class="process-math">\(n \times n\)</span> square pond, we need <span class="process-math">\(4n+4\)</span> number of <span class="process-math">\(1 \times 1\)</span> square hand-painted tile. Suppose that each <span class="process-math">\(1 \times 1\)</span> square hand-painted tile cost <span class="process-math">\($30\text{.}\)</span> Find a function equation for the total price of hand-painted tiles <span class="process-math">\(P(n)\text{,}\)</span> in terms of the side length of the square pond <span class="process-math">\(n\text{.}\)</span></article><div class="para" id="p-21">Given two functions <span class="process-math">\(y=f(x)\)</span> and <span class="process-math">\(z=g(y)\text{,}\)</span> we can construct a new function <span class="process-math">\(z = (g \circ f)(x) = g(f(x))\text{,}\)</span> which is called the composition of <span class="process-math">\(g\)</span> and <span class="process-math">\(f\text{.}\)</span>
+</div>
+<article class="proposition theorem-like" id="proposition-19"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
+</h3>Let <span class="process-math">\(f(t)=t^2+1\)</span> and <span class="process-math">\(g(s) = 2s\text{.}\)</span> <ol class="decimal">
+<li id="li-77"><div class="para" id="p-derived-li-77">Find the function equation of <span class="process-math">\((g \circ f)(x)\text{.}\)</span>
+</div></li>
+<li id="li-78"><div class="para" id="p-derived-li-78">Find the function equation of <span class="process-math">\((f \circ g)(x)\text{.}\)</span>
+</div></li>
+<li id="li-79"><div class="para" id="p-derived-li-79">Is <span class="process-math">\((g \circ f)(x)\)</span> the same function as <span class="process-math">\((f \circ g)(x)\text{?}\)</span> What does this tell you about the order of composition of two functions?</div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-20"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span>
+</h3>Let <span class="process-math">\(f(m)=2m+1\)</span> and <span class="process-math">\(g(p) = \frac{1}{2}p-\frac{1}{2}\text{.}\)</span> <ol class="decimal">
+<li id="li-80"><div class="para" id="p-derived-li-80">Find the function equation of <span class="process-math">\((g \circ f)(x)\text{.}\)</span>
+</div></li>
+<li id="li-81"><div class="para" id="p-derived-li-81">Find the function equation of <span class="process-math">\((f \circ g)(x)\text{.}\)</span>
+</div></li>
+<li id="li-82"><div class="para" id="p-derived-li-82">Is <span class="process-math">\((g \circ f)(x)\)</span> the same function as <span class="process-math">\((f \circ g)(x)\text{?}\)</span>
+</div></li>
+</ol></article><div class="para" id="p-22">Given a function <span class="process-math">\(f\)</span> defined on the domain <span class="process-math">\(D\)</span> with the range <span class="process-math">\(E\)</span> and another function <span class="process-math">\(g\)</span> defined the domain <span class="process-math">\(E\)</span> with the range <span class="process-math">\(D\text{.}\)</span> We say that <span class="process-math">\(g\)</span> is the inverse function of <span class="process-math">\(f\)</span> if <span class="process-math">\(g(f(x))=x\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(D\)</span> and <span class="process-math">\(f(g(x))=x\)</span> for all <span class="process-math">\(x\)</span> in <span class="process-math">\(E\text{.}\)</span> Often the inverse function <span class="process-math">\(g\)</span> is denoted by <span class="process-math">\(f^{-1}\text{.}\)</span>
+</div>
+<article class="proposition theorem-like" id="proposition-21"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span>
+</h3>Let <span class="process-math">\(z(t)=\sqrt{t-3}\)</span> be a function. <ol class="decimal">
+<li id="li-83"><div class="para" id="p-derived-li-83">What are the domain and the range of this function?</div></li>
+<li id="li-84"><div class="para" id="p-derived-li-84">Find a function equation for the inverse function <span class="process-math">\(z^{-1}(t)\text{.}\)</span>
+</div></li>
+<li id="li-85"><div class="para" id="p-derived-li-85">What are the domain and the range of <span class="process-math">\(z^{-1}\text{?}\)</span>
+</div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-22"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span>
+</h3>Let <span class="process-math">\(h(x)=3x-7\)</span> be a function. <ol class="decimal">
+<li id="li-86"><div class="para" id="p-derived-li-86">What are the domain and the range of this function?</div></li>
+<li id="li-87"><div class="para" id="p-derived-li-87">Find a function equation for the inverse function <span class="process-math">\(h^{-1}(t)\text{.}\)</span>
+</div></li>
+<li id="li-88"><div class="para" id="p-derived-li-88">What are the domain and the range of <span class="process-math">\(h^{-1}\text{?}\)</span>
+</div></li>
+</ol></article><div class="para logical" id="p-23">
+<div class="para">The inverse function of an exponential function <span class="process-math">\(f(x)=b^x\)</span> is called the logarithmic function <span class="process-math">\(g(x)=\log_b(x)\text{.}\)</span> According to the definition of inverse functions, we know that <span class="process-math">\(f(g(x)) = x\)</span> and <span class="process-math">\(g(f(x))=x\text{.}\)</span> Therefore we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b^{\log_b(x)}=x, \qquad \log_b(b^x)=x.
+\end{equation*}
+</div>
+<div class="para">This tells us that the number <span class="process-math">\(\log_b(x)\)</span> is the exponent of <span class="process-math">\(b\)</span> that gives <span class="process-math">\(x\text{,}\)</span> that is, if <span class="process-math">\(y=\log_b(x)\text{,}\)</span> then <span class="process-math">\(b^y=x\text{.}\)</span> When the base number <span class="process-math">\(b=e\text{,}\)</span> we write <span class="process-math">\(\log_b(x)\)</span> as <span class="process-math">\(\ln(x)\)</span> and call it the natural logarithmic function. We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ln(e^x) = x, \qquad e^{\ln(x)}=x. 
+\end{equation*}
+</div>
+</div>
+<article class="proposition theorem-like" id="proposition-23"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span>
+</h3>
+<ol class="decimal">
+<li id="li-89"><div class="para" id="p-derived-li-89">What is the domain and the range of the function <span class="process-math">\(y=e^x\text{?}\)</span>
+</div></li>
+<li id="li-90"><div class="para" id="p-derived-li-90">What is the domain and the range of the function <span class="process-math">\(y=\ln(x)\text{?}\)</span>
+</div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-24"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.7</span><span class="period">.</span>
+</h3>Use the definition of logarithms to simplify each expression. <ol class="decimal">
+<li id="li-91"><div class="para" id="p-derived-li-91"><span class="process-math">\(\ln(\frac{1}{e})\text{.}\)</span></div></li>
+<li id="li-92"><div class="para" id="p-derived-li-92"><span class="process-math">\(e^{\ln(5)}\text{.}\)</span></div></li>
+<li id="li-93"><div class="para" id="p-derived-li-93"><span class="process-math">\(\frac{\ln(1)}{3}\text{.}\)</span></div></li>
+<li id="li-94"><div class="para" id="p-derived-li-94"><span class="process-math">\(2\ln(e)\text{.}\)</span></div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-25"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.8</span><span class="period">.</span>
+</h3>Solve the following equations <ol class="decimal">
+<li id="li-95"><div class="para" id="p-derived-li-95"><span class="process-math">\(9 = 3^{x+1}\text{.}\)</span></div></li>
+<li id="li-96"><div class="para" id="p-derived-li-96"><span class="process-math">\((\frac{1}{2})^x=8\text{.}\)</span></div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-26"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.9</span><span class="period">.</span>
+</h3>Use your calculator and pick values for <span class="process-math">\(A, B\)</span> and <span class="process-math">\(r\)</span> to test whether each of the following is true. If the statement is false, cross it out so that you do not attempt to apply it. <ol class="decimal">
+<li id="li-97"><div class="para" id="p-derived-li-97">For every positive numbers <span class="process-math">\(A, B\text{,}\)</span> <span class="process-math">\(\log_b(AB) = \log_b(A) + \log_b(B)\text{.}\)</span>
+</div></li>
+<li id="li-98"><div class="para" id="p-derived-li-98">For every positive numbers <span class="process-math">\(A, B\text{,}\)</span> <span class="process-math">\(\log_b(A+B) = \log_b(A) + \log_b(B)\text{.}\)</span>
+</div></li>
+<li id="li-99"><div class="para" id="p-derived-li-99">For every positive number <span class="process-math">\(A\)</span> and every number <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(\log_b(A^r) = r\log_b(A)\text{.}\)</span>
+</div></li>
+<li id="li-100"><div class="para" id="p-derived-li-100">For every positive numbers <span class="process-math">\(A, B\text{,}\)</span> <span class="process-math">\(\log_b(\frac{A}{B}) = \log_b(A) - \log_b(B)\text{.}\)</span>
+</div></li>
+<li id="li-101"><div class="para" id="p-derived-li-101">For every positive numbers <span class="process-math">\(A, B\text{,}\)</span> <span class="process-math">\(\frac{\log_b(A)}{\log_b(B)} = \log_b(A) - \log_b(B)\text{.}\)</span>
+</div></li>
+<li id="li-102"><div class="para" id="p-derived-li-102">For every positive numbers <span class="process-math">\(A, B\text{,}\)</span> <span class="process-math">\(\log_b(A - B) = \log_b(A) - \log_b(B)\text{.}\)</span>
+</div></li>
+</ol></article><div class="para" id="p-24">Note that <span class="process-math">\(\ln(x) = \log_e(x)\)</span> so all the properties that hold for <span class="process-math">\(\log_b(x)\)</span> for any base <span class="process-math">\(b\)</span> also hold for <span class="process-math">\(\ln(x)\text{.}\)</span>
+</div>
+<article class="proposition theorem-like" id="proposition-27"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.10</span><span class="period">.</span>
+</h3>Write each logarithm in terms of <span class="process-math">\(\ln(2)\)</span> and <span class="process-math">\(\ln(3)\text{.}\)</span> <ol class="decimal">
+<li id="li-103"><div class="para" id="p-derived-li-103"><span class="process-math">\(\ln(6)\text{.}\)</span></div></li>
+<li id="li-104"><div class="para" id="p-derived-li-104"><span class="process-math">\(\ln(\frac{2}{27})\text{.}\)</span></div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-28"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.11</span><span class="period">.</span>
+</h3>Expand each logarithmic expression. <ol class="decimal">
+<li id="li-105"><div class="para" id="p-derived-li-105"><span class="process-math">\(\log_4 (5x^3y)\text{.}\)</span></div></li>
+<li id="li-106"><div class="para" id="p-derived-li-106"><span class="process-math">\(\ln(\frac{\sqrt{3x-5}}{7})\text{.}\)</span></div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-29"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.12</span><span class="period">.</span>
+</h3>Condense each logarithmic expression. <ol class="decimal">
+<li id="li-107"><div class="para" id="p-derived-li-107"><span class="process-math">\(\frac{1}{2}\log_3(x)+3\log_3(x+1)\text{.}\)</span></div></li>
+<li id="li-108"><div class="para" id="p-derived-li-108"><span class="process-math">\(2\ln(x+2)-\ln(x)\text{.}\)</span></div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-30"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.13</span><span class="period">.</span>
+</h3>Solve the following two equations that involve logarithmic functions. <ol class="decimal">
+<li id="li-109"><div class="para" id="p-derived-li-109"><span class="process-math">\(5+2\ln(x)=4\text{.}\)</span></div></li>
+<li id="li-110"><div class="para" id="p-derived-li-110"><span class="process-math">\(2\log_5(3x)=4\text{.}\)</span></div></li>
+</ol></article><div class="para logical" id="p-25">
+<div class="para">On the Richter scale, the magnitude <span class="process-math">\(R\)</span> of an earthquake of intensity <span class="process-math">\(I\)</span> is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R = \log_{10} \frac{I}{I_0}.
+\end{equation*}
+</div>
+<div class="para">Here <span class="process-math">\(I_0=1\)</span> is the minimum intensity that can be detected and is used for comparison. Intensity is a measure of the wave energy of an earthquake.</div>
+</div>
+<article class="proposition theorem-like" id="proposition-31"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.14</span><span class="period">.</span>
+</h3>Find the intensity of each earthquake: <ol class="decimal">
+<li id="li-111"><div class="para" id="p-derived-li-111">North Bay, CA in August 24, 2014, <span class="process-math">\(R=6.0\)</span> (Fatality: 1).</div></li>
+<li id="li-112"><div class="para" id="p-derived-li-112">China in May 12, 2008, <span class="process-math">\(R=8.0\)</span> (Fatalities: 87587).</div></li>
+</ol></article><div class="para logical" id="p-26">
+<div class="para">Common calculators can only calculate logarithm with base <span class="process-math">\(10\)</span> or base <span class="process-math">\(e\text{.}\)</span> What if we want to calculate logarithms that have bases different from <span class="process-math">\(10\)</span> and <span class="process-math">\(e\text{?}\)</span> We can use the following base changing formula:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\log_b(x) = \frac{\log_a(x)}{\log_a(b)}.
+\end{equation*}
+</div>
+</div>
+<article class="proposition theorem-like" id="proposition-32"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.15</span><span class="period">.</span>
+</h3>
+<ol class="decimal">
+<li id="li-113"><div class="para" id="p-derived-li-113">Calculate the value of <span class="process-math">\(\log_4(25)\)</span> using the base changing formula with the new base <span class="process-math">\(10\text{.}\)</span>
+</div></li>
+<li id="li-114"><div class="para" id="p-derived-li-114">Calculate the value of <span class="process-math">\(\log_4(25)\)</span> using the base changing formula with the new base <span class="process-math">\(e\text{.}\)</span>
+</div></li>
+<li id="li-115"><div class="para" id="p-derived-li-115">Compare your answers of the previous questions.</div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-33"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.16</span><span class="period">.</span>
+</h3>In order to see why the base changing formula is true, we will check that<div class="displaymath process-math">
+\begin{equation*}
+\log_a(b) \times \log_b(x) = \log_a(x).
+\end{equation*}
+</div>
+<ol class="decimal">
+<li id="li-116"><div class="para" id="p-derived-li-116">First, simplify the exponential <span class="process-math">\(a^{\log_a(x)}\text{.}\)</span>
+</div></li>
+<li id="li-117"><div class="para" id="p-derived-li-117">Second, simplify the exponential <span class="process-math">\(a^{\log_a(b) \times \log_b(x)}\)</span> by first simplifying <span class="process-math">\(a^{\log_a(b)}\text{.}\)</span>
+</div></li>
+<li id="li-118"><div class="para" id="p-derived-li-118">What can you say about <span class="process-math">\(a^{\log_a(x)}\)</span> and <span class="process-math">\(a^{\log_a(b) \times \log_b(x)}\text{?}\)</span> What does that tell you about <span class="process-math">\(\log_a(x)\)</span> and <span class="process-math">\(\log_a(b) \times \log_b(x)\text{.}\)</span>
+</div></li>
+</ol></article><div class="para" id="p-27">We have learn several categories of functions such as linear functions, quadratic functions, exponential functions, logarithm functions. When given a set of data, how do we decide which type of functions we choose to model the set of the data?</div>
+<article class="proposition theorem-like" id="proposition-34"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.17</span><span class="period">.</span>
+</h3>Go to the link <a class="external" href="https://www.desmos.com/calculator/lwopk4scwd" target="_blank">https://www.desmos.com/calculator/lwopk4scwd</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a>. There are three sets of the data. Determine which type of functions should be used to model each set of the data and the find the exact function equations.</article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">www.desmos.com/calculator/lwopk4scwd</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-exp.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-misc.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Quadratic Functions and their modeling</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href="http://www.utica.edu/faculty_staff/xixiao/" target="_blank"><img src="images/uc_logo.jpg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="article-1.html"><span class="title">Precalculus</span></a></h1>
+<p class="byline"></p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-linear.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="article-1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-exp.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1"><ul class="structural">
+<li><div class="toc-item"><a href="section-linear.html" class="internal"><span class="codenumber">1</span> <span class="title">Linear Functions and Their Modeling</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Quadratic Functions and their modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-exp.html" class="internal"><span class="codenumber">3</span> <span class="title">Exponential Functions and Their Modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-log.html" class="internal"><span class="codenumber">4</span> <span class="title">Logarithmic Functions and Their Modeling</span></a></div></li>
+<li><div class="toc-item"><a href="section-misc.html" class="internal"><span class="codenumber">5</span> <span class="title">Function Transformations and Rational Functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-trig.html" class="internal"><span class="codenumber">6</span> <span class="title">Trigonometric Functions: Basics</span></a></div></li>
+<li><div class="toc-item"><a href="section-trig-adv.html" class="internal"><span class="codenumber">7</span> <span class="title">Trigonometric Functions: Additional Topics</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-2"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Quadratic Functions and their modeling</span>
+</h2>
+<article class="proposition theorem-like" id="motivation-quadratic"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span>
+</h3>Suppose that you are in charge of managing constructing materials at a constructing site. You want to build walls to enclose a rectangular area to store the constructing materials needed for project and you want to have as much area as possible. However, you only have enough materials to build <span class="process-math">\(180\)</span> feet of walls. <ol class="decimal">
+<li id="li-19"><div class="para" id="p-derived-li-19">Pick your favorite length and width so that you can use all the building materials. Then calculate the area of the region.</div></li>
+<li id="li-20"><div class="para" id="p-derived-li-20">Pick your second favorite length and width and repeat the process of the last question. Which dimension gives larger area?</div></li>
+<li id="li-21"><div class="para" id="p-derived-li-21">Draw a diagram showing the rectangular area, and labeling the length of the region using a variable <span class="process-math">\(\ell\text{.}\)</span> Then find the width of the region in terms of the length<span class="process-math">\(\ell\text{.}\)</span>
+</div></li>
+<li id="li-22"><div class="para" id="p-derived-li-22">Write a function equation describing the area of the rectangular area <span class="process-math">\(A\)</span> in terms of the length <span class="process-math">\(\ell\text{.}\)</span> Use Desmos to graph this function.</div></li>
+<li id="li-23"><div class="para" id="p-derived-li-23">Using the graph of this function, decide how should the wall be built to get the maximum possible area. What is the maximum possible area?</div></li>
+</ol></article><div class="para logical" id="p-2">
+<div class="para">The function that gives the area of the rectangular region in terms of one side of the region is called a quadratic function. In general, a <em class="emphasis">quadratic function</em> is a function of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/motivation-quadratic.html">
+\begin{equation*}
+f(x) = ax^2+bx+c
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(a \neq 0\text{.}\)</span> We call this the <em class="emphasis">general form</em> of a quadratic function. Now try to rewrite the equation that you used in <a href="" class="xref" data-knowl="./knowl/motivation-quadratic.html" title="Task 2.1">Task 2.1</a> in the form of <span class="process-math">\(f(x)=ax^2+bx+c\text{.}\)</span> What are the values of <span class="process-math">\(a, b\)</span> and <span class="process-math">\(c\text{?}\)</span>
+</div>
+</div>
+<div class="para" id="p-3">If we want to find the function equation of a quadratic equation when given its graph, we have to pick three different points to plug into the formula <span class="process-math">\(f(x)=ax^2+bx+c\)</span> because we have to figure out the values of three unknowns <span class="process-math">\(a,b\)</span> and <span class="process-math">\(c\text{.}\)</span> The computations will be lengthy because it involves solving a system of linear equations of three variables (it can be done pretty easily if you know how to use a computer package). We will not be doing this in this course. Instead, we will manipulate the function equation <span class="process-math">\(f(x)=ax^2+bx+c\)</span> into a much desired form called the <em class="emphasis">vertex form</em> because a great deal of qualitative information about the function and its graph can simply be read off from this form. We will included the derivation of the algebraic manipulation in the following proof. Feel free to read the proof but it is not required.</div>
+<article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><div class="para logical" id="p-4">
+<div class="para">Before we start doing the algebra, let us recall that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/quadratic-step1.html ./knowl/quadratic-step2.html">
+\begin{equation*}
+(X+Y)^2=X^2+2XY+Y^2.
+\end{equation*}
+</div>
+<div class="para">We will need this formula from <a href="" class="xref" data-knowl="./knowl/quadratic-step1.html" title="Equation 2.4">(2.4)</a> to <a href="" class="xref" data-knowl="./knowl/quadratic-step2.html" title="Equation 2.5">(2.5)</a>. Now we manipulate the quadratic function from the general form into the vertex form.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/quadratic-step1.html ./knowl/quadratic-step2.html" id="mdn-1">
+\begin{align}
+f(x) \amp = ax^2+bx+c\tag{2.1}\\
+f(x) \amp = ax^2+bx+\frac{b^2}{4a} - \frac{b^2}{4a}+c\tag{2.2}\\
+f(x) \amp = a(x^2+\frac{b}{a}x+\frac{b^2}{4a^2}) - \frac{b^2}{4a}+c\tag{2.3}\\
+f(x) \amp = a(x^2+2\frac{b}{2a}x + (\frac{b}{2a})^2) - \frac{b^2}{4a}+c\tag{2.4}\\
+f(x) \amp = a(x+\frac{b}{2a})^2-\frac{b^2}{4a}+c\tag{2.5}\\
+f(x) \amp = a(x+\frac{b}{2a})^2-\frac{b^2-4ac}{4a}\tag{2.6}
+\end{align}
+</div>
+<div class="para">By renaming <span class="process-math">\(h = -\frac{b}{2a}, k = -\frac{b^2-4ac}{4a},\)</span> we have <span class="process-math">\(f(x)=a(x-h)^2+k\)</span>
+</div>
+</div> <div class="para logical" id="p-5">
+<div class="para">Take Equation <a href="" class="xref" data-knowl="./knowl/quadratic-goodform.html" title="Equation 2.6">(2.6)</a>, if we want to solve the quadratic equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/quadratic-goodform.html ./knowl/quadratic-formula.html">
+\begin{equation*}
+ax^2+bx+c = 0\text{,}
+\end{equation*}
+</div>
+<div class="para">it is enough to solve the equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/quadratic-goodform.html ./knowl/quadratic-formula.html">
+\begin{equation*}
+a(x+\frac{b}{2a})^2-\frac{b^2-4ac}{4a} = 0
+\end{equation*}
+</div>
+<div class="para">This is easy to solve because we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/quadratic-goodform.html ./knowl/quadratic-formula.html" id="mdn-2">
+\begin{align}
+a(x+\frac{b}{2a})^2-\frac{b^2-4ac}{4a} \amp = 0\tag{2.7}\\
+a(x+\frac{b}{2a})^2 \amp = \frac{b^2-4ac}{4a}\tag{2.8}\\
+(x+\frac{b}{2a})^2 \amp = \frac{b^2-4ac}{4a^2}\tag{2.9}\\
+x+\frac{b}{2a} \amp = \pm \sqrt{\frac{b^2-4ac}{4a^2}}\tag{2.10}\\
+x \amp = -\frac{b}{2a} \pm \sqrt{\frac{b^2-4ac}{4a^2}} \tag{2.11}\\
+x \amp = \frac{-b\pm\sqrt{b^2-4ac}}{2a}\tag{2.12}
+\end{align}
+</div>
+<div class="para">Equation <a href="" class="xref" data-knowl="./knowl/quadratic-formula.html" title="Equation 2.12">(2.12)</a> is the well-known quadratic formula that you have seen before.</div>
+</div></article></div>
+<div class="para logical" id="p-6">
+<div class="para">The <em class="emphasis">vertex form</em> of a quadratic equation is of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=a(x-h)^2+k\text{.}
+\end{equation*}
+</div>
+<div class="para">The reason this is called the vertex form is because we can read off the vertex of the graph, which is <span class="process-math">\((h,k)\text{.}\)</span> The <em class="emphasis">vertex</em> of a quadratic function is the lowest point (if <span class="process-math">\(a \gt 0\)</span>) or the highest point (if <span class="process-math">\(a \lt 0\)</span>). Using the vertex form of a quadratic equation, we can find the function equation of a quadratic equation by first identifying the vertex (so we will know the values of <span class="process-math">\(h\)</span> and <span class="process-math">\(k\)</span>), and then pick a point on the graph of the quadratic equation other than the vertex to find the value of <span class="process-math">\(a\text{.}\)</span>
+</div>
+</div>
+<article class="proposition theorem-like" id="proposition-4"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
+</h3>Refer to the graph of <span class="process-math">\(k(x)\)</span> in Figure <a href="" class="xref" data-knowl="./knowl/quadratic-findformula.html" title="Figure 2.3: Graph of k(x)">Figure 2.3</a>. <figure class="figure figure-like" id="quadratic-findformula"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="https://s3.amazonaws.com/grapher/exports/1diyeb1c8s.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <ol class="decimal">
+<li id="li-24"><div class="para" id="p-derived-li-24">What are the coordinates of the vertex of <span class="process-math">\(k(x)\text{?}\)</span>
+</div></li>
+<li id="li-25"><div class="para" id="p-derived-li-25">Write a function equation for <span class="process-math">\(k(x)\text{.}\)</span> Graph <span class="process-math">\(k(x)\)</span> in Desmos.</div></li>
+<li id="li-26"><div class="para" id="p-derived-li-26">Solve the quadratic equation <span class="process-math">\(k(x)=15\)</span>
+</div></li>
+<li id="li-27"><div class="para" id="p-derived-li-27">Solve the inequality <span class="process-math">\(k(x) \leq 15\text{.}\)</span>
+</div></li>
+<li id="li-28"><div class="para" id="p-derived-li-28">Is it possible that <span class="process-math">\(k(x) = -11\text{?}\)</span> What about <span class="process-math">\(200\text{?}\)</span> What are the possible outputs of the function <span class="process-math">\(k(x)\text{?}\)</span>
+</div></li>
+</ol></article><article class="definition definition-like" id="definition-1"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span>
+</h3>The <em class="emphasis">domain</em> of a function is the set of allowable inputs to the function. The <em class="emphasis">range</em> of a function is the set of all possible outputs from the function.</article><article class="definition definition-like" id="definition-2"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span>
+</h3>A function <span class="process-math">\(y=f(x)\)</span> is said to be <em class="emphasis">increasing</em> if the graph of <span class="process-math">\(f(x)\)</span> is going uphill from left to right. If the graph of <span class="process-math">\(f(x)\)</span> is going downhill from left to right, then it is called <em class="emphasis">decreasing</em>.</article><article class="proposition theorem-like" id="proposition-5"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
+</h3>Refer to the graph of <span class="process-math">\(q(x)\)</span> in Figure <a href="" class="xref" data-knowl="./knowl/quadratic-findformulaagain.html" title="Figure 2.7: Graph of q(x)">Figure 2.7</a>. <figure class="figure figure-like" id="quadratic-findformulaagain"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="https://s3.amazonaws.com/grapher/exports/tqo3o3cjmv.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <ol class="decimal">
+<li id="li-29"><div class="para" id="p-derived-li-29">Find <span class="process-math">\(q(-2)\text{.}\)</span>
+</div></li>
+<li id="li-30"><div class="para" id="p-derived-li-30">What are the coordinates of the vertex of <span class="process-math">\(q(x)\text{?}\)</span>
+</div></li>
+<li id="li-31"><div class="para" id="p-derived-li-31">Write a function equation for <span class="process-math">\(q(x)\text{.}\)</span> Graph <span class="process-math">\(q(x)\)</span> in Desmos.</div></li>
+<li id="li-32"><div class="para" id="p-derived-li-32">Solve the quadratic equation <span class="process-math">\(q(x)=-6\)</span>
+</div></li>
+<li id="li-33"><div class="para" id="p-derived-li-33">Solve the inequality <span class="process-math">\(q(x) \leq -6\text{.}\)</span>
+</div></li>
+<li id="li-34"><div class="para" id="p-derived-li-34">Solve the inequality <span class="process-math">\(q(x) \gt 2x-12\text{.}\)</span>
+</div></li>
+<li id="li-35"><div class="para" id="p-derived-li-35">What is the domain and the range of the function <span class="process-math">\(q(x)\text{?}\)</span>
+</div></li>
+<li id="li-36"><div class="para" id="p-derived-li-36">On which interval is the function <span class="process-math">\(q(x)\)</span> increasing? On which interval is the function <span class="process-math">\(q(x)\)</span> decreasing?</div></li>
+</ol></article><article class="definition definition-like" id="definition-3"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span>
+</h3>The <em class="emphasis">average rate of change</em> of a function <span class="process-math">\(f(x)\)</span> defined on an interval <span class="process-math">\(a \le x \le b\)</span> is<div class="displaymath process-math">
+\begin{equation*}
+\frac{f(b)-f(a)}{b-a}.
+\end{equation*}
+</div></article><div class="para" id="p-7">Note that the average rate of change computes the slope of the line between the two points <span class="process-math">\((a,f(a))\)</span> and <span class="process-math">\((b,f(b))\text{.}\)</span>
+</div>
+<article class="proposition theorem-like" id="proposition-6"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span>
+</h3>A flower pot falls from the ledge of a balcony on a high-rise building. Any object experiencing the force of gravity can be modeled by the equation <span class="process-math">\(h(t) = -16t^2+vt+c\text{,}\)</span> where <span class="process-math">\(t\)</span> is the time in seconds, <span class="process-math">\(h(t)\)</span> is the height in feet, <span class="process-math">\(c\)</span> is the initial height of the object, and <span class="process-math">\(v\)</span> is the initial velocity of the object. (This model applies to any object experiencing the force of gravity, where the measurement is in English units (feet). There is another version for metric units (meters).) <ol class="decimal">
+<li id="li-37"><div class="para" id="p-derived-li-37">If the pot falls, what is its initial velocity?</div></li>
+<li id="li-38"><div class="para" id="p-derived-li-38">Suppose its takes <span class="process-math">\(3\)</span> seconds for the pot to hit the ground. How high was the balcony?</div></li>
+<li id="li-39"><div class="para" id="p-derived-li-39">Write down the function equation <span class="process-math">\(h(t)\)</span> that gives the height of the flower pot at time <span class="process-math">\(t\text{.}\)</span>
+</div></li>
+<li id="li-40"><div class="para" id="p-derived-li-40">What is the domain and the range of the function <span class="process-math">\(h(t)\text{?}\)</span>
+</div></li>
+<li id="li-41"><div class="para" id="p-derived-li-41">When is the flower pot at the height of <span class="process-math">\(100\)</span> feet?</div></li>
+<li id="li-42"><div class="para" id="p-derived-li-42">What is the average velocity of the flower pot from <span class="process-math">\(0\)</span> second to <span class="process-math">\(3\)</span> seconds?</div></li>
+</ol></article><article class="proposition theorem-like" id="proposition-7"><h3 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span>
+</h3>Mike is the owner of a local ready-mix concrete retailer. He finds that if he charges <span class="process-math">\($90\)</span> per cubic yard, he can sell <span class="process-math">\(3,000\)</span> cubic yard per day. Thereafter, for every <span class="process-math">\($5\)</span> he raises the price, <span class="process-math">\(200\)</span> cubic yard fewer will be sold. <ol class="decimal">
+<li id="li-43"><div class="para" id="p-derived-li-43">Make a table showing the price of concrete (per cubic yard), the amount of concrete sold per day, and the total income per day, for the prices of <span class="process-math">\($90\)</span> to <span class="process-math">\($120\)</span> per cubic yard, in <span class="process-math">\($5\)</span> increments.</div></li>
+<li id="li-44"><div class="para" id="p-derived-li-44">Write a function equation for the amount of concrete sold per day <span class="process-math">\(A\)</span> as a function of the price of concrete <span class="process-math">\(p\text{.}\)</span>
+</div></li>
+<li id="li-45"><div class="para" id="p-derived-li-45">Write an equation describing the total income for one day <span class="process-math">\(I(p)\)</span> in terms of the price of concrete <span class="process-math">\(p\)</span> .</div></li>
+<li id="li-46"><div class="para" id="p-derived-li-46">What is the domain and the range of the function <span class="process-math">\(I(p)\text{?}\)</span>
+</div></li>
+<li id="li-47"><div class="para" id="p-derived-li-47">Suppose Mike will be satisfied if the total income for one day is at least <span class="process-math">\($268,000\text{.}\)</span> What are the possible price range (per cubic yard) he can charge to earn this income?</div></li>
+<li id="li-48"><div class="para" id="p-derived-li-48">What price will Mike earn the maximum income per day? How many cubic yards of concrete will be sold per day? What is the maximum daily income?</div></li>
+</ol></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-linear.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-exp.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

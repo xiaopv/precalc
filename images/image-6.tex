@@ -1,0 +1,22 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+
+			\usepackage{tikz}       
+		\ifdefined\tikzset
+    \tikzset{ampersand replacement = \amp}
+\fi
+
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+\begin{document}
+\pagestyle{empty}
+
+						\begin{tikzpicture}
+							\coordinate (C) at (-1.5cm,-1.cm);
+							\coordinate (A) at (1.5cm,-1.0cm);
+							\coordinate (B) at (1.5cm,1.0cm);
+							\draw (C) -- node[above] {$c$} (B) -- node[right] {$b$} (A) -- node[below] {$13$ feet} (C);
+							\coordinate [label=right:$18.4^{\circ}$] (D) at (-1.2cm,-0.85cm);
+						\end{tikzpicture}
+					\end{document}

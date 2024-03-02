@@ -1,0 +1,1367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext>
+	<docinfo>
+		<brandlogo url="http://www.utica.edu/faculty_staff/xixiao/" source="images/uc_logo.jpg"/>
+		<rename element="proposition">Task</rename>
+		<latex-image-preamble>
+			\usepackage{tikz}  
+			\usepackage{pgfplots}     
+		</latex-image-preamble>
+	</docinfo>
+	<article>
+		<title>Precalculus</title>
+		<section xml:id="section-linear">
+			<title>Linear Functions and Their Modeling</title>
+			<proposition xml:id="motivation-linear">
+				<statement>
+					Suppose that you work for a landscape designer Nancy. Her specialty is designing square ponds that are surrounded by hand-painted tiles. Customers can order the pond in any size square, starting with sides measuring <m>2</m> feet, and available in one-foot increments thereafter (sides of <m>3</m> feet, <m>4</m> feet, <m>5</m> feet, etc.). The tiles are <m>1</m>-foot square, and are placed edge-to-edge along the entire outer perimeter of the pond.
+					<ol>
+						<li>Draw a picture that describes a <m>2</m> by <m>2</m> square pond, clearly indicating the portion of the pond and the portion of the tiles. How many tiles are needed to cover the border for this <m>2</m> by <m>2</m> square pond?</li>
+						<li>Repeat the last question for different pond sizes, from <m>3</m> by <m>3</m> up through <m>6</m> by <m>6</m>. Make a table showing the number of border tiles needed for each size.</li>
+						<li>Based on the table that you created in the last part, if the side length of the pond is increased by <m>1</m> foot, how many more border tiles are needed? Explain why the number of tiles is increasing according to this pattern.</li>
+						<li>How many border tiles are needed for a pond with sides of length <m>12</m> feet?</li>
+						<li>If Nancy orders <m>64</m> border tiles for an upcoming job, how large is the pond the customer wants?</li>
+						<li>Write an equation for the number of tiles as a function of the length of one edge of the pond.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>The function that gives the number of tiles as a function of the length of one edge of the pond in the last problem is called a linear function. A <em>linear function</em> is of the form <me>y=mx+b</me> where <m>m</m> is called the slope and <m>b</m> is the <m>y</m>-intercept of the function. If <m>(x_1,y_1), (x_2,y_2)</m> are two different points on a linear function with <m>x_1 \neq x_2</m>, then the slope of this linear function can be calculated using the formula <me>m = \frac{y_2-y_1}{x_2-x_1}</me></p>
+			<!-- <proposition>
+				<statement>
+					Suppose we know that there are 3718 students at Utica College in 2012 and 4463 students at Utica College in 2016. Assume that the student growth at Utica College follow a linear model.
+					<ol>
+						<li>Write an equation for the number of students as a function of years using the number of students in year 2012 and 2016 (do not use the numbers in the following table for this question).</li>
+						<li>Below is a table that gives the number of students at Utica College from year 2012 to 2016.
+							<table>
+								<tabular top="medium" halign="center">
+									<col halign="left" />
+									<col/>
+									<row bottom="medium">
+										<cell>Year</cell>
+										<cell>2012</cell>
+										<cell>2013</cell>
+										<cell>2014</cell>
+										<cell>2015</cell>
+										<cell>2016</cell>
+									</row>
+									<row bottom="medium">
+										<cell>Number of students</cell>
+										<cell>3718</cell>
+										<cell>3839</cell>
+										<cell>4028</cell>
+										<cell>4249</cell>
+										<cell>4463</cell>
+									</row>
+								</tabular>
+								<title align="center">Number of students at Utica College between 2012 and 2016</title>
+							</table>
+							Go to the link <url href="https://www.desmos.com/calculator/st7mr7otcx">https://www.desmos.com/calculator/st7mr7otcx</url> for a scatterplot of the data in the above table. Graph your function from the last question in the same coordinate system. How well is your function predicting the number of students at Utica College between 2012 and 2016?</li>
+						<li>According to this model, how many students are there in year 2017 at Utica College?</li>
+						<li>After what year will the number of students at Utica College be at least <m>10,000</m>? Do you think that this is a reasonable estimation?</li>
+					</ol>
+				</statement>
+			</proposition> -->
+			<!-- <proposition>
+				<statement>
+					Coldwell Banker is currently the largest real estate agency at a small town in upstate New York. By the end of year <m>2016</m>, Coldwell Banker has sold <m>9,315</m> homes since they started the business many years ago and they sell an average of <m>231</m> homes per year. Assist2Sell is a much younger real estate agency in this town and has sold only <m>2,547</m> homes  by the end of year <m>2016</m>. But Assist2Sell has a much better business model than Coldwell Banker that allows them to sell <m>845</m> homes per year.
+					<ol>
+						<li>Write a function equation to estimate the total number of homes that are sold by Coldwell Banker as a function of the year <m>t</m>.</li>
+						<li>Write a function equation to estimate the total number of homes that are sold by Assist2Sell as a function of the year <m>t</m>.</li>
+						<li>Sketch the graph of both models in the same coordinate system using Desmos. When will the number of homes 	sold by these two real estate agencies equal?</li>
+						<li>When will the number of homes sold by Assit2Sell be double the number of homes sold by Coldwell Banker?</li>
+						<li>After what year will the number of homes sold by Assist2Sell be at least <m>3,000</m> more than the number of homes sold by Coldwell Banker?</li>
+					</ol>
+			</statement>
+			</proposition> -->
+			<proposition>
+				<statement>
+					In this task, we will figure out the hourly wage necessary for a family in Utica-Rome area to afford housing. We will look at real data about hourly wages and the cost for renting each month. Your goal is to use mathematics to decide whether or not you think five families in Utica-Rome area are paid fair wages. The following table contains median market rent for different sizes of apartments in the Utica-Rome area in 2021.
+					<table>
+						<title align="center">2021 Median Market Rent Summary</title>
+							<tabular top="medium" halign="center">
+								<col halign="left" />
+								<col/>
+								<row bottom="medium">
+										<cell>Apartment Size</cell>
+										<cell>Studio</cell>
+										<cell>1 Bedroom</cell>
+										<cell>2 Bedrooms</cell>
+										<cell>3 Bedrooms</cell>
+										<cell>4 Bedrooms</cell>
+									</row>
+									<row bottom="medium">
+										<cell>Price</cell>
+										<cell><m>\$624</m></cell>
+										<cell><m>\$664</m></cell>
+										<cell><m>\$847</m></cell>
+										<cell><m>\$1054</m></cell>
+										<cell><m>\$1213</m></cell>
+									</row>
+								</tabular>
+							</table>
+						The following are six different families living in the Utica-Rome area. In the Upstate New York region, the current minimum wage for non-tipped employees is $12.50 per hour and $8.35 per hours for tipped employees.
+						<dl>
+							<!-- <li>BLACKS Family: 1 adult. You are a Vietnamese American male who just graduated from high school and needs to move out on your own. You found a job making minimum wage for non-tipped employees in Utica - $12.50 per hour - as a line cook at a nearby restaurant. You work 40 hours per week.</li> -->
+							<li><title>RED Family</title> 1 adult. You are a Vietnamese American female who is a full time student working about 20 hours per week. You have a minimum wage job working in the library (no tips). But you got a scholarship, so you get $1000 at the beginning of every month.</li>
+							<li><title>GREEN Family</title> 1 adult; 1 child. You are a young single white mom with one child working as a server at a nearby restaurant. Minimum wage is different if you receive tips - $8.35 per hour. You make minimum way, and you average about $350 per week in tips. You work 40 hours per week.</li>
+							<li><title>BLUE Family</title> 2 adults; 2 children. You are a Latino family with two children under the age of 5. You can’t afford to put both children in childcare. Mom stays home to take care of the children. Dad works 40 hours per week at a construction company that pays 2 times minimum wage for non-tipped employees.</li>
+							<li><title>ORANGE Family</title> 1 adult. You are a young Black woman who is going to school part time and working full time (40 hours per week). You work at the same construction company as the dad of the BLUE family, but most Black women (including you) make 64% what men at the company make.</li>
+							<li><title>PURPLE Family</title> 2 adults; 3 children. You are a family with three children. All three of your children are in school, so both parents works full time (40 hours per week). Both found jobs working for Amazon fullfillment center in Frankfort, NY. Amazon pays employees $17 per hour.</li>
+						</dl>
+						For convienence of calculations, we assume that there are 4 week in one month.
+						<ol>
+							<li>Each member of the team will select one family to begin with. If your team has fewer than 5 members, come back to the remaining families after you have completed with your initial choice.</li>
+							<li>For each family, create an equation that shows the family's earnings over time. Carefully choose your input and output variable. Then graph the equation in Desmos. Use the color of each family for the graph.</li>
+						</ol>
+						Once your team has created the equations and the graphs for all five families, answer the following questions.
+						<ol marker="(a)">
+							<li>Determine the type of apartment you think is the best for each family as a team. Who needs to work the fewest hours each month to pay rent? How did you determine this answer?</li>
+							<li>Who needs to work the most hours each month to pay rent? How did you determine your answer?</li>
+							<li>The purple line and the red line intersect at a point. What is the significance of this point? </li>
+							<li>Financial advisors recommend that you only use 30% of your montly income to pay for rent. Do the numbers of hours you found needed to pay rent match 30% of the earnings for each family? If not, what kind of hoursing can the family afford with only 30% of their income?</li>
+							<li>If we increase minimum wage to $15.00 per hour for non-tipped employees and $10.50 for tipped employees, how would that change the housing situation for each of the five families?</li>
+						</ol>
+				</statement>
+			</proposition>
+		</section>
+		<section>
+			<title>Quadratic Functions and their modeling</title>
+			<proposition xml:id="motivation-quadratic">
+				<statement>
+					Suppose that you are in charge of managing constructing materials at a constructing site. You want to build walls to enclose a rectangular area to store the constructing materials needed for project and you want to have as much area as possible. However, you only have enough materials to build <m>180</m> feet of walls.
+					<ol>
+						<li>Pick your favorite length and width so that you can use all the building materials. Then calculate the area of the region.</li>
+						<li>Pick your second favorite length and width and repeat the process of the last question. Which dimension gives larger area?</li>
+						<li>Draw a diagram showing the rectangular area, and labeling the length of the region using a variable <m>\ell</m>. Then find the width of the region in terms of the length<m>\ell</m>.</li>
+						<li>Write a function equation describing the area of the rectangular area <m>A</m> in terms of the length <m>\ell</m>. Use Desmos to graph this function.</li>
+						<li>Using the graph of this function, decide how should the wall be built to get the maximum possible area. What is the maximum possible area?</li>
+					</ol>
+				</statement>
+			</proposition>
+			
+			<p>The function that gives the area of the rectangular region in terms of one side of the region is called a quadratic function. In general, a <em>quadratic function</em> is a function of the form <me>f(x) = ax^2+bx+c</me> where <m>a \neq 0</m>. We call this the <em>general form</em> of a quadratic function. Now try to rewrite the equation that you used in <xref ref="motivation-quadratic"/> in the form of <m>f(x)=ax^2+bx+c</m>. What are the values of <m>a, b</m> and <m>c</m>?</p>
+
+			<p>If we want to find the function equation of a quadratic equation when given its graph, we have to pick three different points to plug into the formula <m>f(x)=ax^2+bx+c</m> because we have to figure out the values of three unknowns <m>a,b</m> and <m>c</m>. The computations will be lengthy because it involves solving a system of linear equations of three variables (it can be done pretty easily if you know how to use a computer package). We will not be doing this in this course. Instead, we will manipulate the function equation <m>f(x)=ax^2+bx+c</m> into a much desired form called the <em>vertex form</em> because a great deal of qualitative information about the function and its graph can simply be read off from this form. We will included the derivation of the algebraic manipulation in the following proof. Feel free to read the proof but it is not required.</p>
+			<proof>
+				<p>Before we start doing the algebra, let us recall that <me>(X+Y)^2=X^2+2XY+Y^2.</me> We will need this formula from <xref ref="quadratic-step1"/> to <xref ref="quadratic-step2"/>. Now we manipulate the quadratic function from the general form into the vertex form.
+				<mdn>
+					<mrow>f(x) \amp = ax^2+bx+c</mrow>
+					<mrow>f(x) \amp = ax^2+bx+\frac{b^2}{4a} - \frac{b^2}{4a}+c</mrow>
+					<mrow>f(x) \amp = a(x^2+\frac{b}{a}x+\frac{b^2}{4a^2}) - \frac{b^2}{4a}+c</mrow>
+					<mrow xml:id="quadratic-step1">f(x) \amp = a(x^2+2\frac{b}{2a}x + (\frac{b}{2a})^2) - \frac{b^2}{4a}+c</mrow>
+					<mrow xml:id="quadratic-step2">f(x) \amp = a(x+\frac{b}{2a})^2-\frac{b^2}{4a}+c</mrow>
+					<mrow xml:id="quadratic-goodform"> f(x) \amp = a(x+\frac{b}{2a})^2-\frac{b^2-4ac}{4a}</mrow>
+				</mdn>
+				By renaming <m>h = -\frac{b}{2a}, k = -\frac{b^2-4ac}{4a},</m> we have <m>f(x)=a(x-h)^2+k</m></p>
+
+				<p>Take Equation <xref ref="quadratic-goodform"/>, if we want to solve the quadratic equation <me> ax^2+bx+c = 0</me>, it is enough to solve the equation <me> a(x+\frac{b}{2a})^2-\frac{b^2-4ac}{4a} = 0</me> This is easy to solve because we have
+				<mdn>
+					<mrow>a(x+\frac{b}{2a})^2-\frac{b^2-4ac}{4a} \amp = 0</mrow>
+					<mrow>a(x+\frac{b}{2a})^2 \amp = \frac{b^2-4ac}{4a}</mrow>
+					<mrow>(x+\frac{b}{2a})^2 \amp = \frac{b^2-4ac}{4a^2}</mrow>
+					<mrow>x+\frac{b}{2a} \amp = \pm \sqrt{\frac{b^2-4ac}{4a^2}}</mrow>
+					<mrow>x \amp = -\frac{b}{2a} \pm \sqrt{\frac{b^2-4ac}{4a^2}} </mrow>
+					<mrow xml:id="quadratic-formula">x \amp = \frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
+				</mdn>
+				Equation <xref ref="quadratic-formula"/> is the well-known quadratic formula that you have seen before.</p>
+			</proof>
+			<p>The <em>vertex form</em> of a quadratic equation is of the form <me>f(x)=a(x-h)^2+k</me>. The reason this is called the vertex form is because we can read off the vertex of the graph, which is <m>(h,k)</m>. The <em>vertex</em> of a quadratic function is the lowest point (if <m>a \gt 0</m>) or the highest point (if <m>a \lt 0</m>). Using the vertex form of a quadratic equation, we can find the function equation of a quadratic equation by first identifying the vertex (so we will know the values of <m>h</m> and <m>k</m>), and then pick a point on the graph of the quadratic equation other than the vertex to find the value of <m>a</m>.</p>
+			<proposition>
+				<statement>
+					Refer to the graph of <m>k(x)</m> in Figure <xref ref="quadratic-findformula"/>.
+					<figure xml:id="quadratic-findformula">
+        	        <title>Graph of <m>k(x)</m></title>
+        	        <image width="100%" source="https://s3.amazonaws.com/grapher/exports/1diyeb1c8s.png"></image>
+    	        	</figure>
+    	        	<ol>
+    	        		<li>What are the coordinates of the vertex of <m>k(x)</m>?</li>
+    	        		<li>Write a function equation for <m>k(x)</m>. Graph <m>k(x)</m> in Desmos.</li>
+    	        		<li>Solve the quadratic equation <m>k(x)=15</m></li>
+    	        		<li>Solve the inequality <m>k(x) \leq 15</m>.</li>
+    	        		<li>Is it possible that <m>k(x) = -11</m>? What about <m>200</m>? What are the possible outputs of the function <m>k(x)</m>?</li>
+    	        	</ol>
+				</statement>
+			</proposition>
+			<definition>
+				<statement>
+					The <em>domain</em> of a function is the set of allowable inputs to the function. The <em>range</em> of a function is the set of all possible outputs from the function.
+				</statement>
+			</definition>
+			<definition>
+				<statement>
+					A function <m>y=f(x)</m> is said to be <em>increasing</em> if the graph of <m>f(x)</m> is going uphill from left to right. If the graph of <m>f(x)</m> is going downhill from left to right, then it is called <em>decreasing</em>.
+				</statement>
+			</definition>
+			<proposition>
+				<statement>
+					Refer to the graph of <m>q(x)</m> in Figure <xref ref="quadratic-findformulaagain"/>.
+					<figure xml:id="quadratic-findformulaagain">
+        	        <title>Graph of <m>q(x)</m></title>
+        	        <image width="100%" source="https://s3.amazonaws.com/grapher/exports/tqo3o3cjmv.png"></image>
+    	        	</figure>
+    	        	<ol>
+    	        		<li>Find <m>q(-2)</m>.</li>
+    	        		<li>What are the coordinates of the vertex of <m>q(x)</m>?</li>
+    	        		<li>Write a function equation for <m>q(x)</m>. Graph <m>q(x)</m> in Desmos.</li>
+    	        		<li>Solve the quadratic equation <m>q(x)=-6</m></li>
+    	        		<li>Solve the inequality <m>q(x) \leq -6</m>.</li>
+    	        		<li>Solve the inequality <m>q(x) \gt 2x-12</m>.</li>
+    	        		<li>What is the domain and the range of the function <m>q(x)</m>?</li>
+    	        		<li>On which interval is the function <m>q(x)</m> increasing? On which interval is the function <m>q(x)</m> decreasing?</li>
+    	        	</ol>
+				</statement>
+			</proposition>
+			<definition>
+				<statement>
+					The <em>average rate of change</em> of a function <m>f(x)</m> defined on an interval <m>a \le x \le b</m> is <me>\frac{f(b)-f(a)}{b-a}.</me>
+				</statement>
+			</definition>
+			<p>Note that the average rate of change computes the slope of the line between the two points <m>(a,f(a))</m> and <m>(b,f(b))</m>.</p>
+			<proposition>
+				<statement>
+					A flower pot falls from the ledge of a balcony on a high-rise building. Any object experiencing the force of gravity can be modeled by the equation <m>h(t) = -16t^2+vt+c</m>, where <m>t</m> is the time in seconds, <m>h(t)</m> is the height in feet, <m>c</m> is the initial height of the object, and <m>v</m> is the initial velocity of the object. (This model applies to any object experiencing the force of gravity, where the measurement is in English units (feet). There is another version for metric units (meters).)
+					<ol>
+						<li>If the pot falls, what is its initial velocity?</li>
+						<li>Suppose its takes <m>3</m> seconds for the pot to hit the ground. How high was the balcony?</li>
+						<li>Write down the function equation <m>h(t)</m> that gives the height of the flower pot at time <m>t</m>.</li>
+						<li>What is the domain and the range of the function <m>h(t)</m>?</li>
+						<li>When is the flower pot at the height of <m>100</m> feet?</li>
+						<li>What is the average velocity of the flower pot from <m>0</m> second to <m>3</m> seconds?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Mike is the owner of a local ready-mix concrete retailer. He finds that if he charges <m>$90</m> per cubic yard, he can sell <m>3,000</m> cubic yard per day. Thereafter, for every <m>$5</m> he raises the price, <m>200</m> cubic yard fewer will be sold.
+					<ol>
+						<li>Make a table showing the price of concrete (per cubic yard), the amount of concrete sold per day, and the total income per day, for the prices of <m>$90</m> to <m>$120</m> per cubic yard, in <m>$5</m> increments.</li>
+						<li>Write a function equation for the amount of concrete sold per day <m>A</m> as a function of the price of concrete <m>p</m>.</li>
+						<li>Write an equation describing the total income for one day <m>I(p)</m> in terms of the price of concrete <m>p</m> .</li>
+						<li>What is the domain and the range of the function <m>I(p)</m>?</li>
+						<li>Suppose Mike will be satisfied if the total income for one day is at least <m>$268,000</m>. What are the possible price range (per cubic yard) he can charge to earn this income?</li>
+						<li>What price will Mike earn the maximum income per day? How many cubic yards of concrete will be sold per day? What is the maximum daily income?</li>
+					</ol>
+				</statement>
+			</proposition>
+		</section>
+		<section xml:id="section-exp">
+			<title>Exponential Functions and Their Modeling</title>
+			<proposition>
+				<statement>
+					<p>If we start with a single yeast cell under favorable growth conditions, then it will divide in one hour to form two identical "daughter cells". In turn, after another hour, each of these daughter cells will divide to produce two identical cells; we now have four identical "granddaughter cells" of the original parent cell. Under ideal conditions, this "doubling effect" will continue.</p>
+					<ol>
+						<li>Create a table that contains the number of yeast cells <m>N(t)</m> at any given hours between <m>t=0</m> and <m>t=8</m>.</li>
+						<li>How many yeast cells are there when <m>t=100</m>? (If you are stuck with this question or it takes too long, move on to the next question and then come back to this one later.) </li>
+						<li>Write a function equation of the number of yeast cells <m>N(t)</m> in terms of the hours <m>t</m>.</li>
+						<li>If you were not able to answer Question 2, can you answer that question now using the function equation from Question 3?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>The function that models the number of yeast cells in terms of time is called an exponential function. In general, an <em>exponential function</em> is a function of the form <m>f(x)=b^x</m> where <m>b\gt0</m>. Here <m>b</m> is called the base and <m>x</m> is called the exponent. Let us first explore some properties of exponentials.</p>
+			<proposition>
+				<statement>
+					<p>Consider three expressions that involve exponential functions <m>2^x \times 3^y</m>, <m>(2 \times 3)^{xy}</m>, <m>(2 \times 3)^{x+y}</m>. By plugging in pairs of values for <m>x</m> and <m>y</m>, decide whether any of these three expressions are the same or not.</p>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					<p>Consider three expressions that involve exponential functions <m>2^x \times 2^y</m>, <m>2^{xy}</m>, <m>2^{x+y}</m>. By plugging in pairs of values for <m>x</m> and <m>y</m>, decide whether any of these three expressions are the same or not.</p>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					<p>Consider three expressions that involve exponential functions <m>2^x \times 3^x</m>, <m>(2 \times 3)^{x}</m>, <m>(2 + 3)^{x+x}</m>. By plugging in value for <m>x</m>, decide whether any of these three expressions are the same or not.</p>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					<p>Consider three expressions that involve exponential functions <m>(2^x)^y</m>, <m>2^{x+y}</m>, <m>2^{xy}</m>. By plugging in pairs of values for <m>x</m> and <m>y</m>, decide whether any of these three expressions are the same or not.</p>
+				</statement>
+			</proposition>
+			<p>Let us recall that for any <m>b \gt 0</m>, we have <m>b^0=1</m>, <m>b^{-1} = \frac{1}{b}</m>. Let <m>\frac{p}{q}</m> be a rational number where <m>q \gt 0</m>, we have <me>b^{\frac{p}{q}} = \sqrt[q]{b^p}.</me></p>
+			<proposition>
+				<statement>
+					Calculate the following exponentials without using calculators:
+					<ol>
+						<li><m>3^{-2}</m></li>
+						<li><m>8^{2/3}</m></li>
+						<li><m>4^{-3/2}</m></li>
+						<li><m>27^{-4/3}</m></li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>In application, exponential functions have a lot of limitations in many cases due to its simple nature. Instead, we use functions of exponential type. A function of exponential type is of the form <m>f(x) = a \times b^x</m> where <m>a \neq 0</m> and <m>b \gt 0 </m>.</p>
+			<proposition>
+				<statement>
+					<p>Let us re-consider the yeast cell growth problem. This time, we will start with three yeast cells instead of one.</p>
+					<ol>
+						<li>Create a table that contains the number of yeast cells <m>M(t)</m> at any given hours between <m>t=0</m> and <m>t=8</m>.</li>
+						<li>Can you use an exponential function to model this yeast cell growth problem?</li>
+						<li>Now model this problem using a function of exponential type. Write a function equation of the number of yeast cells <m>M(t)</m> in terms of the hours <m>t</m>.</li>
+						<li>What is the domain and the range of the function <m>M(t)</m>.</li>
+						<li>After how many hours will the number of yeast cells be exactly <m>98304</m>?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					<p>Pam opens an investment account at Vanguard with <m>$10,000</m>. The account earns approximately <m>6.5\%</m> compounded annually. Let <m>t</m> be the number of years the account has been open, and <m>B(t)</m> the balance in the account.</p>
+					<ol>
+						<li>Make a table showing the balance, <m>B(t)</m>, in the account at <m>t=0,1,2,3,</m> and <m>4</m> years.</li>
+						<li>Write a function equation for the function <m>B(t)</m>.</li>
+						<li>What is the domain and the range of the function <m>B(t)</m>?</li>
+						<li>Use your function equation to determine the balance in <m>20</m> years.</li>
+						<li>For the balance of the account to reach <m>$100,000</m>, at least how many years should Pam wait?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					<p>The population of a small town has been growing. The population is shown in the following table.</p>
+						<table>
+							<title align="center">Population of a small town</title>
+							<tabular top="medium" halign="center">
+								<col halign="left" />
+								<col/>
+								<row bottom="medium">
+									<cell><m>t</m> (years since 1980)</cell>
+									<cell><m>0</m></cell>
+									<cell><m>10</m></cell>
+									<cell><m>20</m></cell>
+									<cell><m>30</m></cell>
+								</row>
+								<row bottom="medium">
+									<cell>Population <m>P(t)</m></cell>
+									<cell><m>2,354</m></cell>
+									<cell><m>3,164</m></cell>
+									<cell><m>4,252</m></cell>
+									<cell><m>5,714</m></cell>
+								</row>
+							</tabular>
+						</table>
+					<ol>
+						<li>What is the average number of people added to the town per year between 1980 and 2010?</li>
+						<li>Assuming that the population continues to grow exponentially, write a function equation for <m>P(t)</m>.</li>
+						<li>If the population continues to grow according to the model, what is the population in 2015?</li>
+						<li>When will the population reach 10,000?</li>
+						<li>The gross domestic product (GDP) per capita of this small town in the year 1980 is <m>$83,145</m> and has been increased at the rate of <m>3.4\%</m> every year since then. Write a function equation for the GDP per capita <m>G(t)</m> in terms of time <m>t</m> in years.</li>
+						<li>Write a function equation for the total GDP of this small town <m>H(t)</m> in terms of time <m>t</m> in years. Simplify the function equation as much as you can.</li>
+						<li>When will the total GDP of this small town reach one billion dollars?</li>
+						<li>Suppose that <m>3\%</m> of the annual GDP is spent on infrastructure. How much will be spent on infrastructure in this town in the year 2019?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>The Newton’s Law of Cooling (Warming) describes the principle of the heat loss of a body to its surroundings provided the temperature difference is small and the nature of radiating surface remains same. The temperature <m>T</m> of an object at time <m>t</m> is given by the formula <me>T(t)=T_a+(T_0 −T_a)e^{−kt}</me> where <m>T(0) = T_0</m> is the initial temperature of the object, <m>T_a</m> is the ambient temperature and <m>k \gt 0</m> is a constant that depends on the object. The letter <m>e</m> represents a number that is often used as the base in exponential functions because it has a number of special properties (you will learn more about this in calculus). The value of the number <m>e</m> is approximately <m>2.718</m>.</p>
+			<proposition>
+				<statement>
+					<p>A <m>40^{\circ}</m>F roast is cooked in a <m>350^{\circ}</m>F oven. After <m>2</m> hours, the temperature of the roast is <m>125^{\circ}</m>F.</p>
+					<ol>
+						<li>Assuming the temperature of the roast follows Newton’s Law of Warming, find a formula for the temperature of the roast <m>T(t)</m> as a function of its time in the oven, <m>t</m>, in hours.</li>
+						<li>The roast is done when the internal temperature reaches <m>165^{\circ}</m>F. When will the roast be done?</li>
+					</ol>
+				</statement>
+			</proposition>
+		</section>
+		<section xml:id="section-log">
+			<title>Logarithmic Functions and Their Modeling</title>
+			<proposition>
+				<statement>
+					Recall that to build the edge of an <m>n \times n</m> square pond, we need <m>4n+4</m> number of <m>1 \times 1</m> square hand-painted tile. Suppose that each <m>1 \times 1</m> square hand-painted tile cost <m>$30</m>. Find a function equation for the total price of hand-painted tiles <m>P(n)</m>, in terms of the side length of the square pond <m>n</m>.
+				</statement>
+			</proposition>
+			<p>Given two functions <m>y=f(x)</m> and <m>z=g(y)</m>, we can construct a new function <m>z = (g \circ f)(x) = g(f(x))</m>, which is called the composition of <m>g</m> and <m>f</m>.</p>
+			<proposition>
+				<statement>
+					Let <m>f(t)=t^2+1</m> and <m>g(s) = 2s</m>.
+					<ol>
+						<li>Find the function equation of <m>(g \circ f)(x)</m>.</li>
+						<li>Find the function equation of <m>(f \circ g)(x)</m>.</li>
+						<li>Is <m>(g \circ f)(x)</m> the same function as <m>(f \circ g)(x)</m>? What does this tell you about the order of composition of two functions?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Let <m>f(m)=2m+1</m> and <m>g(p) = \frac{1}{2}p-\frac{1}{2}</m>.
+					<ol>
+						<li>Find the function equation of <m>(g \circ f)(x)</m>.</li>
+						<li>Find the function equation of <m>(f \circ g)(x)</m>.</li>
+						<li>Is <m>(g \circ f)(x)</m> the same function as <m>(f \circ g)(x)</m>?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>Given a function <m>f</m> defined on the domain <m>D</m> with the range <m>E</m> and another function <m>g</m> defined the domain <m>E</m> with the range <m>D</m>. We say that <m>g</m> is the inverse function of <m>f</m> if <m>g(f(x))=x</m> for all <m>x</m> in <m>D</m> and <m>f(g(x))=x</m> for all <m>x</m> in <m>E</m>. Often the inverse function <m>g</m> is denoted by <m>f^{-1}</m>.</p>
+			<proposition>
+				<statement>
+					Let <m>z(t)=\sqrt{t-3}</m> be a function.
+					<ol>
+						<li>What are the domain and the range of this function?</li>
+						<li>Find a function equation for the inverse function <m>z^{-1}(t)</m>.</li>
+						<li>What are the domain and the range of <m>z^{-1}</m>?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Let <m>h(x)=3x-7</m> be a function.
+					<ol>
+						<li>What are the domain and the range of this function?</li>
+						<li>Find a function equation for the inverse function <m>h^{-1}(t)</m>.</li>
+						<li>What are the domain and the range of <m>h^{-1}</m>?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>The inverse function of an exponential function <m>f(x)=b^x</m> is called the logarithmic function <m>g(x)=\log_b(x)</m>. According to the definition of inverse functions, we know that <m>f(g(x)) = x</m> and <m>g(f(x))=x</m>. Therefore we have <me>b^{\log_b(x)}=x, \qquad \log_b(b^x)=x.</me> This tells us that the number <m>\log_b(x)</m> is the exponent of <m>b</m> that gives <m>x</m>, that is, if <m>y=\log_b(x)</m>, then <m>b^y=x</m>. When the base number <m>b=e</m>, we write <m>\log_b(x)</m> as <m>\ln(x)</m> and call it the natural logarithmic function. We have <me>\ln(e^x) = x, \qquad e^{\ln(x)}=x. </me></p>
+			<proposition>
+				<statement>
+					<ol>
+						<li>What is the domain and the range of the function <m>y=e^x</m>?</li>
+						<li>What is the domain and the range of the function <m>y=\ln(x)</m>?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Use the definition of logarithms to simplify each expression.
+					<ol>
+						<li><m>\ln(\frac{1}{e})</m>.</li>
+						<li><m>e^{\ln(5)}</m>.</li>
+						<li><m>\frac{\ln(1)}{3}</m>.</li>
+						<li><m>2\ln(e)</m>.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Solve the following equations
+					<ol>
+						<li><m>9 = 3^{x+1}</m>.</li>
+						<li><m>(\frac{1}{2})^x=8</m>.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Use your calculator and pick values for <m>A, B</m> and <m>r</m> to test whether each of the following is true. If the statement is false, cross it out so that you do not attempt to apply it.
+					<ol>
+						<li>For every positive numbers <m>A, B</m>, <m>\log_b(AB) = \log_b(A) + \log_b(B)</m>.</li>
+						<li>For every positive numbers <m>A, B</m>, <m>\log_b(A+B) = \log_b(A) + \log_b(B)</m>.</li>
+						<li>For every positive number <m>A</m> and every number <m>r</m>, <m>\log_b(A^r) = r\log_b(A)</m>.</li>
+						<li>For every positive numbers <m>A, B</m>, <m>\log_b(\frac{A}{B}) = \log_b(A) - \log_b(B)</m>.</li>
+						<li>For every positive numbers <m>A, B</m>, <m>\frac{\log_b(A)}{\log_b(B)} = \log_b(A) - \log_b(B)</m>.</li>
+						<li>For every positive numbers <m>A, B</m>, <m>\log_b(A - B) = \log_b(A) - \log_b(B)</m>.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>Note that <m>\ln(x) = \log_e(x)</m> so all the properties that hold for <m>\log_b(x)</m> for any base <m>b</m> also hold for <m>\ln(x)</m>.</p>
+			<proposition>
+				<statement>
+					Write each logarithm in terms of <m>\ln(2)</m> and <m>\ln(3)</m>.
+					<ol>
+						<li><m>\ln(6)</m>.</li>
+						<li><m>\ln(\frac{2}{27})</m>.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Expand each logarithmic expression.
+					<ol>
+						<li><m>\log_4 (5x^3y)</m>.</li>
+						<li><m>\ln(\frac{\sqrt{3x-5}}{7})</m>.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Condense each logarithmic expression.
+					<ol>
+						<li><m>\frac{1}{2}\log_3(x)+3\log_3(x+1)</m>.</li>
+						<li><m>2\ln(x+2)-\ln(x)</m>.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+				Solve the following two equations that involve logarithmic functions.
+					<ol>
+						<li><m>5+2\ln(x)=4</m>.</li>
+						<li><m>2\log_5(3x)=4</m>.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>On the Richter scale, the magnitude <m>R</m> of an earthquake of intensity <m>I</m> is given by <me>R = \log_{10} \frac{I}{I_0}.</me> Here <m>I_0=1</m> is the minimum intensity that can be detected and is used for comparison. Intensity is a measure of the wave energy of an earthquake.</p>
+			<proposition>
+				<statement>
+					Find the intensity of each earthquake:
+					<ol>
+						<li>North Bay, CA in August 24, 2014, <m>R=6.0</m> (Fatality: 1).</li>
+						<li>China in May 12, 2008, <m>R=8.0</m> (Fatalities: 87587).</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>Common calculators can only calculate logarithm with base <m>10</m> or base <m>e</m>. What if we want to calculate logarithms that have bases different from <m>10</m> and <m>e</m>? We can use the following base changing formula: <me> \log_b(x) = \frac{\log_a(x)}{\log_a(b)}.</me></p>
+			<proposition>
+				<statement>
+					<ol>
+						<li>Calculate the value of <m>\log_4(25)</m> using the base changing formula with the new base <m>10</m>.</li>
+						<li>Calculate the value of <m>\log_4(25)</m> using the base changing formula with the new base <m>e</m>.</li>
+						<li>Compare your answers of the previous questions.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					In order to see why the base changing formula is true, we will check that <me> \log_a(b) \times \log_b(x) = \log_a(x).</me>
+					<ol>
+						<li>First, simplify the exponential <m>a^{\log_a(x)}</m>.</li>
+						<li>Second, simplify the exponential <m>a^{\log_a(b) \times \log_b(x)}</m> by first simplifying <m>a^{\log_a(b)}</m>.</li>
+						<li>What can you say about <m>a^{\log_a(x)}</m> and <m>a^{\log_a(b) \times \log_b(x)}</m>? What does that tell you about <m>\log_a(x)</m> and <m>\log_a(b) \times \log_b(x)</m>.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>We have learn several categories of functions such as linear functions, quadratic functions, exponential functions, logarithm functions. When given a set of data, how do we decide which type of functions we choose to model the set of the data?</p>
+			<proposition>
+				<statement>
+					Go to the link <url href="https://www.desmos.com/calculator/lwopk4scwd">https://www.desmos.com/calculator/lwopk4scwd</url>. There are three sets of the data. Determine which type of functions should be used to model each set of the data and the find the exact function equations.
+				</statement>
+			</proposition>
+		</section>
+		<section xml:id="section-misc">
+			<title>Function Transformations and Rational Functions</title>
+			<p>In this section, we will examine how to build new functions from existing functions and how the graphs of the new functions relate to the original ones.</p>
+			<proposition>
+				<statement>
+					Given a function <m>f(x)=x^2</m> and two real numbers <m>h</m> and <m>k</m>.
+					<ol>
+						<li>Write down the function formula for a new function <m>g(x) = f(x-h)+k</m>.</li>
+						<li>Go to the link <url href="https://www.desmos.com/calculator/z82wdytmxl">https://www.desmos.com/calculator/z82wdytmxl</url>. Begin by setting <m>h = 0</m> and <m>k=0</m>.</li>
+						<li><p>The role of <m>h</m>:
+							<ol>
+								<li>What happens as <m>h</m> increases from <m>0</m>?</li>
+								<li>What happens as <m>h</m> decreases from <m>0</m>?</li>
+								<li>Describes in words how different values of <m>h</m> affect the graph of the function <m>g(x)</m>.</li>
+								<li>Without graphing, predict how the graph of <m>q(x)=(x-4)^5</m> will be different from the graph of <m>p(x)=x^5</m>.</li>
+							</ol></p>
+						</li>
+						<li><p>The role of <m>k</m>: (Remember to reset <m>h=0</m> and <m>k=0</m>)
+							<ol>
+								<li>What happens as <m>k</m> increases from <m>0</m>?</li>
+								<li>What happens as <m>k</m> decreases from <m>0</m>?</li>
+								<li>Describes in words how different values of <m>k</m> affect the graph of the function <m>g(x)</m>.</li>
+								<li>Without graphing, predict how the graph of <m>q(x)=x^5-4</m> will be different from the graph of <m>p(x)=x^5</m>.</li>
+							</ol></p>
+						</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>The role that <m>h</m> and <m>k</m> play can be summarized as horizontal and vertical shifts. Now we look at a different set of transformations.</p>
+			<proposition>
+				<statement>
+					Given a function <m>f(x)=e^x</m>.
+					<ol>
+						<li>Write down the function formula for two new functions <m>g(x) = f(-x)</m> and <m>h(x) = -f(x)</m>.</li>
+						<li>Go to the link <url href="https://www.desmos.com/calculator/r5bvx2qhjr">https://www.desmos.com/calculator/r5bvx2qhjr</url>.Turn on the graphs of <m>f(x)</m> and <m>g(x)</m> in Desmos. How would you describe the procedure that obtains the graph of <m>g(x)</m> from the graph of <m>f(x)</m>?</li>
+						<li>Turn on the graphs of <m>f(x)</m> and <m>h(x)</m> in Desmos. How would you describe the procedure that obtains the graph of <m>h(x)</m> from the graph of <m>f(x)</m>?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>Shifts and reflections are called rigid transformations because the shape of the graph does not change. We now move to non-rigid transformations. But before that, we introduce a new function called the step function. The step function <m>f(x) = \lfloor x \rfloor</m> is defined to be the greatest integer less than or equal to <m>x</m>. The step function is also called the floor function.</p>
+			<proposition>
+				<statement>
+					Find <m>\lfloor 1.5 \rfloor</m>, <m>\lfloor -1.5 \rfloor</m> and <m>\lfloor -10 \rfloor</m>.
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Given a function <m>f(x)=\lfloor x \rfloor</m> and two real numbers <m>a</m> and <m>b</m>.
+					<ol>
+						<li>Write down the function formula for a new function <m>g(x) = af(bx)</m>.</li>
+						<li>Go to the link <url href="https://www.desmos.com/calculator/qwuu0dswwf">https://www.desmos.com/calculator/qwuu0dswwf</url>. Begin by setting <m>a = 1</m> and <m>b = 1</m>.</li>
+						<li><p>The role of <m>a</m>:
+							<ol>
+								<li>What happens as <m>a</m> increases from <m>1</m>?</li>
+								<li>What happens as <m>a</m> decreases from <m>1</m> to <m>0</m>?</li>
+								<li>What happen when <m>a = -1</m>?</li>
+								<li>What happen as <m>a</m> increases from <m>-1</m> to <m>0</m>?</li>
+								<li>What happen as <m>a</m> decreases from <m>-1</m>?</li>
+								<li>Without graphing, predict how the graph of <m>q(x)=-4x^5</m> will be different from the graph of <m>p(x)=x^5</m>.</li>
+							</ol></p>
+						</li>
+						<li><p>The role of <m>b</m>: (Remember to reset <m>a=1</m> and <m>b=1</m>)
+							<ol>
+								<li>What happens as <m>b</m> increases from <m>1</m>?</li>
+								<li>What happens as <m>b</m> decreases from <m>1</m> to <m>0</m>?</li>
+								<li>What happen when <m>b = -1</m>?</li>
+								<li>What happen as <m>b</m> increases from <m>-1</m> to <m>0</m>?</li>
+								<li>What happen as <m>b</m> decreases from <m>-1</m>?</li>
+								<li>Without graphing, predict how the graph of <m>q(x)=(-4x)^5</m> will be different from the graph of <m>p(x)=x^5</m>.</li>
+							</ol></p>
+						</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+				Given any function <m>f(x)</m>, describe how the graph of each function below will differ from the graph of <m>f(x)</m>. Try not to use any specific function equations to answer this question but if you are stuck, take <m>f(x)=x^2</m> and experiment it using Desmos.
+					<ol>
+						<li><m>3f(x-2)</m></li>
+						<li><m>f(3(x-2))</m></li>
+						<li><m>-3f(x+2)-5</m></li>
+						<li><m>3f(-3(x-2))-7</m></li>
+						<li><m>5f(3(x+2))+7</m></li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>A rational function is a quotient of polynomial functions that can be written as <me>f(x) = \frac{P(x)}{Q(x)}</me> where <m>P(x), Q(x)</m> are polynomials and <m>Q(x)</m> is not the zero polynomial. The domain of a rational function of <m>x</m> includes all real numbers except for a few <m>x</m>-values that make the denominator zero.</p>
+			<proposition>
+				<statement>
+					<ol>
+						<li>Find the domain and the range of <m>f(x) = \frac{1}{x}</m>.</li>
+						<li><p>Fill in the table 
+							<table>
+							<title align="center">Values of <m>f(x)</m> when <m>x \to 0</m></title>
+							<tabular top="medium" halign="center">
+								<col halign="left" />
+								<col/>
+								<row bottom="medium">
+									<cell><m>x</m></cell>
+									<cell><m>1</m></cell>
+									<cell><m>0.1</m></cell>
+									<cell><m>0.01</m></cell>
+									<cell><m>0.001</m></cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>f(x)</m></cell>
+									<cell><m></m></cell>
+									<cell><m></m></cell>
+									<cell><m></m></cell>
+									<cell><m></m></cell>
+								</row>
+							</tabular>
+						</table> Create a similar table for <m>x</m> approaching to <m>0</m> from the negative side. Where do you think <m>f(x)</m> approaches to when <m>x \to 0</m>?</p>
+						</li>
+						<li><p>Fill in the table 
+							<table>
+							<title align="center">Values of <m>f(x)</m> when <m>x \to +\infty</m></title>
+							<tabular top="medium" halign="center">
+								<col halign="left" />
+								<col/>
+								<row bottom="medium">
+									<cell><m>x</m></cell>
+									<cell><m>1</m></cell>
+									<cell><m>10</m></cell>
+									<cell><m>100</m></cell>
+									<cell><m>1000</m></cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>f(x)</m></cell>
+									<cell><m></m></cell>
+									<cell><m></m></cell>
+									<cell><m></m></cell>
+									<cell><m></m></cell>
+								</row>
+							</tabular>
+						</table>Where do you think <m>f(x)</m> approaches to when <m>x \to +\infty</m>? What about <m>-\infty</m>?</p>
+						</li>
+					</ol>
+				</statement>
+			</proposition>
+			<definition>
+				<statement>
+					We say that the line <m>x=a</m> is a vertical asymptote of the graph of <m>f</m> when <m>f(x) \to \infty</m> or <m>f(x) \to -\infty</m> as <m>x \to a</m>, either from the right or from the left. We say that the line <m>y=b</m> is a horizontal asymptote of the graph of <m>f</m> when <m>f(x) \to b</m> as <m>x \to +\infty</m> or <m>x \to -\infty</m>.
+				</statement>
+			</definition>
+			<proposition>
+				<statement>
+					Let <m>f(x) = \frac{2x^2}{x^2-1}</m>.
+					<ol>
+						<li>Find the domain and the range of <m>f(x)</m>.</li>
+						<li>Find all the vertical and horizontal asymptotes of <m>f(x)</m>.</li>
+						<li>Find the intervals that <m>f(x)</m> is increasing and the intervals that <m>f(x)</m> is decreasing.</li>
+						<li>What is the average rate of change for <m>3 \lt x \lt 6</m>?</li>
+						<li>Solve the inequality <m>f(x) \gt 3</m>.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Let <m>f(x) = \frac{x^2+x-2}{x^2-x-6}</m>.
+					<ol>
+						<li>Find the domain and the range of <m>f(x)</m>.</li>
+						<li>Find all the vertical and horizontal asymptotes of <m>f(x)</m>.</li>
+						<li>Find the intervals that <m>f(x)</m> is increasing and the intervals that <m>f(x)</m> is decreasing.</li>
+						<li>What is the average rate of change for <m>4 \lt x \lt 8</m>?</li>
+						<li>Solve the inequality <m>f(x) \gt 6</m>.</li>
+					</ol>
+				</statement>
+			</proposition>
+		</section>
+		<section xml:id="section-trig">
+			<title>Trigonometric Functions: Basics</title>
+			<p>Recall that the circumference of a circle of radius <m>r</m> is <m>2\pi r</m>, and the area is <m>\pi r^2</m>.</p>
+			<proposition>
+				<statement>
+					Go to the link <url href="https://www.desmos.com/calculator/quxkgvqegp">https://www.desmos.com/calculator/quxkgvqegp</url>. Given two points <m>(2,3)</m> and <m>(-3,-2)</m>.
+					<ol>
+						<li>First find the length of the red line segment. How does this length relate to the <m>x</m>-coordinates of the two points?</li>
+						<li>Second find the length of the blue line segment. How does this length relate to the <m>y</m>-coordinates of the two points?</li>
+						<li>Third find the distance of the two points, namely the length of the green line segment. How does the distance of the two points relate to the <m>x</m> and the <m>y</m>-coordinates of the two points?</li>
+					</ol>
+					For any given two points <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m>, find a formula that gives the distance of the two points.
+				</statement>
+			</proposition>
+			<p>A circle is a collection of points in the plane that are at a given distance, called the radius, from a given point, called the center. If we denote the radius by <m>r</m> and the center by <m>(h,k)</m>, the set of points <m>(x,y)</m> satisfies the formula <me>(x-h)^2+(y-k)^2=r^2.</me></p>
+			<proposition>
+				<statement>
+				A circle has its center at <m>(-4,-8)</m>, and just touches the <m>y</m>-axis (without crossing it).
+					<ol>
+						<li>Draw a diagram of the circle in the <m>xy</m>-plane.</li>
+						<li>Write the equation of the circle.</li>
+						<li>Find the circumference and area of the circle.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+				A circle has its center at <m>(-6,-4)</m>, and contains the point <m>(-1,8)</m>.
+					<ol>
+						<li>Draw a diagram of the circle in the <m>xy</m>-plane.</li>
+						<li>Write the equation of the circle.</li>
+						<li>Find the circumference and area of the circle.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>It is well-know that one of the way to measure angles is using degrees. One full rotation is <m>360^{\circ}</m>, half of a rotation is <m>180^{\circ}</m> and a right angle is <m>90^{\circ}</m>. We now introduce another unit to measure angles, called radian, that is based on the arc length cut by the angle, and the radius. Note that the circumference of the circle with radius <m>1</m> is equal to <m>2\pi</m> so we say that one full rotation is <m>2\pi</m> radian (or simply rad). Half of a rotation is <m>\pi</m> rad and a right is <m>\frac{\pi}{2}</m> rad.</p>
+			<proposition>
+				<statement>
+					Convert the angles <m>0^{\circ}, 30^{\circ}, 45^{\circ}, 60^{\circ}, 120^{\circ}, 135^{\circ}, 150^{\circ}</m> to radians. Then develop a conversion formula between radian and degree.
+				</statement>
+			</proposition>
+			<p>An arc of a circle is a piece of a circle, and has length. A sector is a part of the plane enclosed by two radii and an arc of a circle, and has area.</p>
+			<proposition>
+				<statement>
+					<ol>
+						<li>What is the length of the arc along a circle of radius <m>7</m> cut out by an angle of <m>90^{\circ}</m>?</li>
+						<li>What is the length of the arc along a circle of radius <m>3</m> cut out by an angle of <m>45^{\circ}</m>?</li>
+						<li>What is the length of the arc along a circle of radius <m>5</m> cut out by an angle of <m>30^{\circ}</m>?</li>
+						<li><p>Fill in the following table
+							<table>
+							<title align="center">Using radian to calculate arc length</title>
+							<tabular top="medium" halign="center">
+								<col halign="center" />
+								<col/>
+								<row bottom="medium">
+									<cell>Angle measured in degree</cell>
+									<cell>Angle measured in radian</cell>
+									<cell>Radius</cell>
+									<cell>Arc length</cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>90^{\circ}</m></cell>
+									<cell><m></m></cell>
+									<cell><m>7</m></cell>
+									<cell><m></m></cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>45^{\circ}</m></cell>
+									<cell><m></m></cell>
+									<cell><m>3</m></cell>
+									<cell><m></m></cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>30^{\circ}</m></cell>
+									<cell><m></m></cell>
+									<cell><m>5</m></cell>
+									<cell><m></m></cell>
+								</row>
+							</tabular>
+						</table>
+						Then create a formula that calculates the length of an arc using the radian of the angle.</p></li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					<ol>
+						<li>What is the area of the sector cut out of a circle of radius <m>7</m> cut out by an angle of <m>90^{\circ}</m>?</li>
+						<li>What is the area of the sector cut out of a circle of radius <m>3</m> cut out by an angle of <m>45^{\circ}</m>?</li>
+						<li>What is the area of the sector cut out of a circle of radius <m>5</m> cut out by an angle of <m>30^{\circ}</m>?</li>
+						<li><p>Fill in the following table
+							<table>
+							<title align="center">Using radian to calculate sector area</title>
+							<tabular top="medium" halign="center">
+								<col halign="center" />
+								<col/>
+								<row bottom="medium">
+									<cell>Angle measured in degree</cell>
+									<cell>Angle measured in radian</cell>
+									<cell>Radius</cell>
+									<cell>Sector area</cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>90^{\circ}</m></cell>
+									<cell><m></m></cell>
+									<cell><m>7</m></cell>
+									<cell><m></m></cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>45^{\circ}</m></cell>
+									<cell><m></m></cell>
+									<cell><m>3</m></cell>
+									<cell><m></m></cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>30^{\circ}</m></cell>
+									<cell><m></m></cell>
+									<cell><m>5</m></cell>
+									<cell><m></m></cell>
+								</row>
+							</tabular>
+						</table>
+						Then create a formula that calculates the area of a sector using the radian of the angle.</p></li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>From now on, we will be using radian to measure angles unless otherwise specified. We now discuss the six trigonometric functions of angles between <m>0</m> and <m>\frac{\pi}{2}</m> in the right triangles. After that we will discuss trigonometric functions for any angles.</p>
+			<figure>
+				<title>A right triangle</title>
+				<image width="50%">
+					<latex-image>
+							\begin{tikzpicture}
+								\coordinate [label=left:$C$] (C) at (-1.5cm,-1.cm);
+								\coordinate [label=right:$A$] (A) at (1.5cm,-1.0cm);
+								\coordinate [label=above:$B$] (B) at (1.5cm,1.0cm);
+								\draw (C) -- node[above] {hyp} (B) -- node[right] {opp} (A) -- node[below] {adj} (C);
+								\coordinate [label=right:$\alpha$] (D) at (-1.3cm,-0.85cm);
+							\end{tikzpicture}
+					</latex-image>
+				</image>
+			</figure>
+			<p>Using the lengths of these three sides, you can form six ratios that define the six trigonometric functions of the angle <m>\alpha</m>. <me>\text{sine, cosine, tangent, cotangent, secant, cosecant.}</me> Note that <m>0 \lt \alpha \lt \frac{\pi}{2}</m> and the definitions below do not work angles that are outside of this range. We use the following abbrevations: opp for the length of the side opposite to <m>\alpha</m>, adj for the length of the side adjacent to <m>\alpha</m>, hyp for the length of the hypotenuse. <me>\sin(\alpha) = \frac{\text{opp}}{\text{hyp}}, \qquad \cos(\alpha) = \frac{\text{adj}}{\text{hyp}}, \qquad \tan(\alpha) = \frac{\text{opp}}{\text{adj}}</me> <me>\csc(\alpha) = \frac{\text{hyp}}{\text{opp}}, \qquad \sec(\alpha) = \frac{\text{hyp}}{\text{adj}}, \qquad \cot(\alpha) = \frac{\text{adj}}{\text{opp}}</me></p>
+			<proposition>
+				<statement>
+					Suppose that <m>\Delta DEF</m> is a right triangle, with right angle at <m>E</m>. Let <m>DF=4</m> and <m>EF=2</m>. Determine <m>DE</m> and then use the side lengths to compute <m>\sin(\angle EDF), \cos(\angle EDF), \tan(\angle EDF), \cot(\angle EDF), \sec(\angle EDF), \csc(\angle EDF)</m>.
+				</statement>
+			</proposition>
+			<proposition xml:id="problem-verifysimpletrigid">
+				<statement>
+					Find the values of <m>\displaystyle \sin(\frac{\pi}{4}), \cos(\frac{\pi}{4}), \tan(\frac{\pi}{4}), \cot(\frac{\pi}{4}), \sec(\frac{\pi}{4}), \csc(\frac{\pi}{4})</m>. Compute
+					<ol>
+						<li><m>\displaystyle \sin^2(\frac{\pi}{4}) + \cos^2(\frac{\pi}{4})</m></li>
+						<li><m>\displaystyle \sec^2(\frac{\pi}{4}) - \tan^2(\frac{\pi}{4})</m></li>
+						<li><m>\displaystyle \csc^2(\frac{\pi}{4}) - \cot^2(\frac{\pi}{4})</m></li>
+					</ol>
+				</statement>
+			</proposition>
+			<figure>
+				<title>An isosceles triangle</title>
+				<image width="50%">
+					<latex-image>
+							\begin{tikzpicture}
+								\coordinate [label=left:$C$] (C) at (-1.5cm,-1.0cm);
+								\coordinate [label=right:$A$] (A) at (1.5cm,-1.0cm);
+								\coordinate [label=above:$B$] (B) at (1.5cm,2.0cm);
+								\draw (C) -- (B) -- node[right] {$1$} (A) -- node[below] {$1$} (C);
+								\coordinate [label=right:$\frac{\pi}{4}$] (D) at (-1.2cm,-0.75cm);
+								\coordinate [label=below:$\frac{\pi}{4}$] (E) at (1.3cm,1.8cm);
+							\end{tikzpicture}
+					</latex-image>
+				</image>
+			</figure>
+			<proposition xml:id="task-30-60">
+				<statement>
+					Find the six trigonometric values of <m>\displaystyle \frac{\pi}{6}</m> and <m>\displaystyle \frac{\pi}{3}</m>. Then compute the same trigonometric expressions in <xref ref="problem-verifysimpletrigid"/> for <m>\displaystyle \frac{\pi}{6}</m> and <m>\displaystyle \frac{\pi}{3}</m>. (Hint: You need to first figure out the length of <m>BD</m>.)
+				</statement>
+			</proposition>
+			<figure>
+				<title>A <m>30^{\circ}</m>-<m>60^{\circ}</m>-<m>90^{\circ}</m> triangle</title>
+				<image width="50%">
+					<latex-image>
+							\begin{tikzpicture}
+								\coordinate [label=left:$C$] (C) at (-1.5cm,-1.0cm);
+								\coordinate [label=right:$A$] (A) at (1.5cm,-1.0cm);
+								\coordinate [label=above:$B$] (B) at (0cm,1.6cm);
+								\coordinate [label=below:$D$] (D) at (0cm,-1.0cm);
+								\draw (C) -- node[below] {$1$} (D) -- node[below] {$1$} (A) -- node[right] {$2$} (B) -- node[left] {$2$} (C);
+								\draw (B) -- (D);
+								\coordinate [label=right:$\frac{\pi}{6}$] (E) at (-0.15cm,1.0cm);
+								\coordinate [label=below:$\frac{\pi}{3}$] (F) at (1.1cm,-0.4cm);
+							\end{tikzpicture}
+					</latex-image>
+				</image>
+			</figure>
+			<proposition>
+				<statement>
+					A surveyor stands <m>115</m> feet from the base of the Washington Monument. The surveyor measures the angle of elevation to the top of the monument to be <m>78.3^{\circ}</m>. How tall is the Washington Monument?
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Figure <xref ref="skatboard"/> is a skateboard ramp. Find the length <m>c</m> and the height <m>b</m>.
+				</statement>
+			</proposition>
+			<figure xml:id="skatboard">
+				<title>A skateboard ramp.</title>
+				<image width="50%">
+					<latex-image>
+						\begin{tikzpicture}
+							\coordinate (C) at (-1.5cm,-1.cm);
+							\coordinate (A) at (1.5cm,-1.0cm);
+							\coordinate (B) at (1.5cm,1.0cm);
+							\draw (C) -- node[above] {$c$} (B) -- node[right] {$b$} (A) -- node[below] {$13$ feet} (C);
+							\coordinate [label=right:$18.4^{\circ}$] (D) at (-1.2cm,-0.85cm);
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</figure>
+			<p>Now we know how to define trigonometric functions for angles between <m>0</m> and <m>\frac{\pi}{2}</m>, what about angles larger than <m>\frac{\pi}{2}</m>? In order to do that, we need to use the unit circle.</p>
+			<figure xml:id="unit-circle">
+				<title>The Unit Circle</title>
+				<image width="50%">
+					<latex-image>
+						\begin{tikzpicture}
+							\draw [thick] (0,0) circle (3cm);
+							\draw [thick ->] (-3.5,0) -- (3.5,0) node[right] {$x$};
+							\draw [thick ->] (0,-3.5) -- (0,3.5) node[right] {$y$};
+							\draw (0,0) --  (1.5,2.6) node[above] {$(x,y)$};
+							\draw (1.5,0) -- (1.5,2.6);
+							\draw (0,0.2) -- (0,0.2) node[right] {$\alpha$};
+						\end{tikzpicture}
+					</latex-image>
+				</image>
+			</figure>
+			<proposition>
+				<statement>
+					Let <m>(x,y)</m> be a point on the unit circle and let <m>\alpha</m> be the angle formed by the positive <m>x</m>-axis and the line that connects the origin and the point <m>(x,y)</m>. Find a formula that express <m>x</m> and <m>y</m> using trigonometric functions of <m>\alpha</m>. (Hint: Notice that the radius of the circle is <m>1</m>.)
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Refer to the Figure <xref ref="unit-circle-fill-in"/>. 
+					<ol>
+						<li>First fill in the box with the measure of angle in radian.</li>
+						<li>Second using the answers of <xref ref="problem-verifysimpletrigid"/> and <xref ref="task-30-60"/> to figure out the coordinate of the points of <m>30^{\circ}, 45^{\circ}</m> and <m>60^{\circ}</m>.</li>
+						<li>Third using properties of symmetry to figure out the coordinate of the points of <m>120^{\circ}, 135^{\circ}</m> and <m>150^{\circ}</m>.</li>
+						<li>Fourth using the same idea as in the last question to figure out the rest of the coordinates in the unit circle.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<figure xml:id="unit-circle-fill-in">
+				<title>The Unit Circle</title>
+				<image width="100%">
+					<latex-image>
+						\begin{tikzpicture} [>=stealth, baseline=0,scale=2.5, angle/.style={draw,text=white,fill=white,minimum height=1cm, minimum width=1cm},point/.style={white}]
+						<!-- angle/.style={fill=white},point/.style={}-->
+						
+							\draw [white] (-3.6,-3.6) rectangle (3.6,3.6);
+							\draw [thick,fill=white] (0,0) circle (3cm);
+							\draw [thick, ->] (-3.3,0) -- (3.3,0);
+							\draw [thick, ->] (0,-3.3) -- (0,3.3);
+							\draw (0,0) --  node [angle] {$\frac{\pi}{2}$} (90:3) node[point, above right] {$ \left(0,1\right) $};
+							\draw (0,0) --  node [angle] {\footnotesize{$\pi$}} (180:3) node[point, above left] {$ \left(-1,0\right) $};
+							\draw (0,0) --  node [angle] {$\frac{3\pi}{2}$} (270:3) node[point, below right] {$ \left(0,-1\right) $};
+							\draw (0,0) --  node [angle] {\footnotesize{$2\pi$}} (0:3) node[point, above right] {$ \left(1,0\right) $};
+							\draw (0,0) --  node [angle] {$\frac{\pi}{4}$} (45:3)  node [point, above right] {$ \left( \frac{\sqrt2}{2} , \frac{\sqrt2}{2}  \right) $};
+							\draw (0,0) --  node [angle] {$\frac{3\pi}{4}$} (135:3) node [point, above left] {$ \left( -\frac{\sqrt2}{2} , \frac{\sqrt2}{2}  \right) $};
+							\draw (0,0) --  node [angle] {$\frac{5\pi}{4}$} (225:3) node [point, below left] {$ \left( -\frac{\sqrt2}{2} , -\frac{\sqrt2}{2}  \right) $};
+							\draw (0,0) --  node [angle] {$\frac{7\pi}{4}$} (315:3) node [point, below right] {$ \left( \frac{\sqrt2}{2} , -\frac{\sqrt2}{2}  \right) $};
+							\draw (0,0) --  node [near end, angle] {$\frac{\pi}{6}$} (30:3) node [point, above right] {$ \left( \frac{\sqrt3}{2} , \frac{1}{2}  \right) $};
+							\draw (0,0) --  node [near end, angle] {$\frac{\pi}{3}$} (60:3) node [point, above right] {$ \left( \frac{1}{2} , \frac{\sqrt3}{2}  \right) $};
+							\draw (0,0) --  node [near end, angle] {$\frac{2\pi}{3}$} (120:3) node [point, above left] {$ \left( -\frac{1}{2} , \frac{\sqrt3}{2}  \right) $};
+							\draw (0,0) --  node [near end, angle] {$\frac{5\pi}{6}$} (150:3) node [point, above left] {$ \left(- \frac{\sqrt3}{2} , \frac{1}{2}  \right) $};
+							\draw (0,0) --  node [near end, angle] {$\frac{7\pi}{6}$} (210:3) node [point, below left] {$ \left(- \frac{\sqrt3}{2} , -\frac{1}{2}  \right) $};
+							\draw (0,0) --  node [near end, angle] {$\frac{4\pi}{3}$} (240:3) node [point, below left] {$ \left( -\frac{1}{2} , -\frac{\sqrt3}{2}  \right) $};
+							\draw (0,0) --  node [near end, angle] {$\frac{5\pi}{3}$} (300:3) node [point, below right] {$ \left( \frac{1}{2} , -\frac{\sqrt3}{2}  \right) $};
+							\draw (0,0) --  node [near end, angle] {$\frac{11\pi}{6}$} (330:3) node [point, below right] {$ \left( \frac{\sqrt3}{2} , -\frac{1}{2}  \right) $};
+
+							\foreach \n in {1,2,3,4}
+							\foreach \t in {0,30,45,60}
+							\fill (\n*90+\t:3) circle (0.03cm);
+							\foreach \t in {30,45,60, 120,135,150, 210,225,240, 300,315,330}
+							\node [font=\tiny, fill=white,inner sep=1pt] at (\t:.75) {$ \t\degree $};
+						\end{tikzpicture} 
+					</latex-image>
+				</image>
+			</figure>
+			<proposition>
+				<statement>
+					Use your answer in Task <xref ref="unit-circle-fill-in"/> to fill in the following table.
+				</statement>
+			</proposition>
+			<table>
+				<title align="center">Trig values for important angles</title>
+				<tabular top="medium" halign="center">
+				<col halign="center" />
+				<row bottom="medium">
+					<cell></cell>
+					<cell><m>\sin</m></cell>
+					<cell><m>\cos</m></cell>
+					<cell><m>\tan</m></cell>
+					<cell><m>\cot</m></cell>
+					<cell><m>\sec</m></cell>
+					<cell><m>\csc</m></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>0^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>30^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>45^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>60^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>90^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>120^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>135^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>150^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>180^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>210^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>225^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>240^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>270^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>300^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>315^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+				<row bottom="medium">
+					<cell><m>330^{\circ}</m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+			</tabular>
+			</table>
+		</section>
+		<section xml:id="section-trig-adv">
+			<title>Trigonometric Functions: Additional Topics</title>
+			<p>We start this section by investigating graphs of trigonometric functions. The following is the graph of <m>y=\sin(x)</m></p>
+			<figure xml:id="graph-sin">
+				<title>The Graph of <m>y=\sin(x)</m></title>
+				<image width="100%">
+					<latex-image>
+						<![CDATA[\begin{tikzpicture}
+						\begin{axis}[width=13.5cm, height=5cm, axis x line=center, axis y line=middle, samples=100, ymin=-1.5, ymax=1.5, xmin=-7.0, xmax=7.0, domain=-2*pi:2*pi, xtick={-6.28318, -4.7123889, -3.14159, -1.5708, 1.5708, 3.14159, 4.7123889, 6.28318}, xticklabels={$-2\pi$, $-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$}]
+						\addplot [] {sin(deg(x))};
+						\end{axis}
+						\end{tikzpicture}]]>
+					</latex-image>
+				</image>
+			</figure>
+			<p>Note that the maximum value of the sine curve can take is <m>1</m> and the minimum value is <m>-1</m>. The range of the sine function is <m>[-1,1]</m>. The amplitude represents half the distance between the maximum and minimum values of the function and thus it is equal to <m>1</m>.</p>
+			<proposition>
+				<statement>
+					We will investigate how the variable <m>a</m> in the general form <me>y=a\sin(b(x-h))+k</me> will affect the amplitude of the sine curve. Go to the link <url href="https://www.desmos.com/calculator/qsvc9fflcg">https://www.desmos.com/calculator/qsvc9fflcg</url>.
+					<ol>
+						<li>What happens as <m>a</m> increases from <m>1</m>?</li>
+						<li>What happens as <m>a</m> decreases from <m>1</m> to <m>0</m>?</li>
+						<li>What is the relationship between <m>a</m> and the amplitude?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>The mid-line of the sine curve is the horizontal line that runs exactly in the middle of the maximum and the minimum of the curve. Thus the mid-line is <m>y=0</m>.</p>
+			<proposition>
+				<statement>
+					We will investigate how the variable <m>k</m> in the general form <me>y=a\sin(b(x-h))+k</me> will affect the midline of the sine curve. Go to the link <url href="https://www.desmos.com/calculator/qsvc9fflcg">https://www.desmos.com/calculator/qsvc9fflcg</url>.
+					<ol>
+						<li>What happens as <m>k</m> increases from <m>0</m>?</li>
+						<li>What happens as <m>k</m> decreases from <m>0</m>?</li>
+						<li>What is the relationship between <m>k</m> and the midline?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>The period is the horizontal length of one cycle of the sine curve (such as from one peak to the next peak). The period of the sine curve is <m>2\pi</m>.</p>
+			<proposition>
+				<statement>
+					We will investigate how the variable <m>b</m> in the general form <me>y=a\sin(b(x-h))+k</me> will affect the mid-line of the sine curve. Go to the link <url href="https://www.desmos.com/calculator/qsvc9fflcg">https://www.desmos.com/calculator/qsvc9fflcg</url>. Fill in the following table:
+					<table>
+						<title align="center">Relations between period and <m>b</m></title>
+						<tabular top="medium" halign="center">
+							<col halign="center" />
+							<col/>
+								<row bottom="medium">
+									<cell>Values of <m>b</m></cell>
+									<cell>Period</cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>1</m></cell>
+									<cell><m></m></cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>4</m></cell>
+									<cell><m></m></cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>2</m></cell>
+									<cell><m></m></cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>2\pi</m></cell>
+									<cell><m></m></cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>\frac{\pi}{2}</m></cell>
+									<cell><m></m></cell>
+								</row>
+								<row bottom="medium">
+									<cell><m>\frac{\pi}{4}</m></cell>
+									<cell><m></m></cell>
+								</row>
+						</tabular>
+					</table>
+					You cannot directly see <m>b</m> on the sine curve but <m>b</m> does affects the period. Using the above table, can you come up with a formula that determines the period of the sine curve given the value of <m>b</m>. In reverse, if you know the the period of the sine curve, how can you find the value of <m>b</m>?
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					At the end, we will investigate how the variable <m>h</m> in the general form <me>y=a\sin(b(x-h))+k</me> will affect the graph of the the sine curve. Go to the link <url href="https://www.desmos.com/calculator/qsvc9fflcg">https://www.desmos.com/calculator/qsvc9fflcg</url>.
+					<ol>
+						<li>What happens as <m>h</m> increases from <m>0</m>?</li>
+						<li>What happens as <m>k</m> decreases from <m>0</m>?</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Predict what each of the following graphs will look like and sketch by hand. 
+					<ol>
+						<li><m>y=14\sin(2\pi x)+4</m>.</li>
+						<li><m>y=-\frac{1}{2}\sin(\frac{\pi}{2}(x-1))+\frac{2}{3}</m>.</li>
+					</ol>
+					Then Use Desmos to check your answer.
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Let us investigate the general form for the cosine form <me>y=a\cos(b(x-h))+k.</me> Go to the link <url href="https://www.desmos.com/calculator/mka32cuaa8">https://www.desmos.com/calculator/mka32cuaa8</url>. Find out the relationships between <m>a,b,h,k</m> and the amplitude, the mid-line, the period and the horizontal shift of the cosine curve.
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					The following graph is a graph of a trigonometric function.
+					<figure>
+						<title>A graph of a trig function</title>
+						<image xml:id="trig-graph-problem">
+							<sageplot>
+								v(x)=3*sin(pi*x/2)-4
+								p1 = plot(v, (x, -2, 10), gridlines="major",color="black", thickness=1, gridlinesstyle=dict(linewidth=0.5, linestyle="-"), figsize=5, ticks=[1,1], aspect_ratio=0.75,ymin=-8, ymax=1)
+								p1
+							</sageplot>
+						</image>
+					</figure>
+					<ol>
+						<li>Write a function equation for the function of the form <m>a\sin(b(x-h))+k</m>.</li>
+						<li>Write a function equation for the function of the form <m>a\cos(b(x-h))+k</m>.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>We now move to discuss inverse trigonometric functions. We started with the inverse sine function.</p>
+			<definition>
+				<statement>
+					The inverse sine function <m>y=\arcsin(x)</m> if <m>\sin(y)=x</m> where <m>-1 \leq x \leq 1</m> and <m>-\frac{\pi}{2} \leq y \leq \frac{\pi}{2}</m>. The domain of <m>y=\arcsin(x)</m> is <m>[-1,1]</m>, and the range is <m>[-\frac{\pi}{2},\frac{\pi}{2}]</m>.
+				</statement>
+			</definition>
+			<p>The domain of the sine function is all real numbers and the range of the sine function is <m>[-1,1]</m>. Notice that the domain of the inverse sine function is <m>[-1,1]</m> but the range is <m>[-\frac{\pi}{2},\frac{\pi}{2}]</m>, not all real numbers.</p>
+			<proposition>
+				<statement>
+					Without using the calculator, evaluate each of the expressions: <m>\arcsin(-\frac{1}{2})</m>, <m>\arcsin(\frac{\sqrt{3}}{2})</m>, <m>\arcsin(-2)</m>.
+				</statement>
+			</proposition>
+			<definition>
+				<statement>
+					The inverse cosine function <m>y=\arccos(x)</m> if <m>\cos(y)=x</m> where <m>-1 \leq x \leq 1</m> and <m>0 \leq y \leq \pi</m>. The domain of <m>y=\arccos(x)</m> is <m>[-1,1]</m>, and the range is <m>[0,\pi]</m>.
+
+					The inverse tangent function <m>y=\arctan(x)</m> if <m>\tan(y)=x</m> where <m>-\infty \leq x \leq \infty</m> and <m>-\frac{\pi}{2} \leq y \leq \frac{\pi}{2}</m>. The domain of <m>y=\arctan(x)</m> is <m>(-\infty,\infty)</m>, and the range is <m>[-\frac{\pi}{2},\frac{\pi}{2}]</m>.
+				</statement>
+			</definition>
+			<proposition>
+				<statement>
+					Without using the calculator, evaluate each of the expressions: <m>\arccos(\frac{\sqrt{2}}{2})</m>, <m>\arctan(0)</m>, <m>\arctan(-1)</m>.
+				</statement>
+			</proposition>
+			<p>Recall that for any function <m>f</m> that has an inverse function <m>f^{-1}</m>, we have <m>f(f^{-1}(x))=x</m> and <m>f^{-1}(f(x))=x</m>. One caveat is that these formulas are only true if <m>x</m> is the correct domain.</p>
+			<proposition>
+				<statement>
+					If possible, find the exact value of each expression.
+					<ol>
+						<li><m>\tan(\arctan(-5))</m></li>
+						<li><m>\arcsin(\sin(\frac{5\pi}{3}))</m></li>
+						<li><m>\cos(\arccos(\pi))</m></li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>Now we look at how to evaluate compositions of trigonometric functions and inverse trigonometric functions that are not of the same origins.</p>
+			<proposition>
+				<statement>
+					Let us find the exact value of the expression <m>\tan(\arccos\frac{2}{3})</m>.
+					<ol>
+						<li>First, let us call <m>\arccos(\frac{2}{3})=\alpha</m>. Create a right triangle such that one of the non-right triangles is <m>\alpha</m> and <m>\cos(\alpha)=\frac{2}{3}</m>.</li>
+						<li>Second, find out the value of <m>\tan(\alpha)</m>.</li>
+						<li>Third, find out the value of <m>\tan(\arccos\frac{2}{3})</m>.</li>
+					</ol>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					Find the exact value of <m>\cos(\arcsin(-\frac{3}{5}))</m>.
+				</statement>
+			</proposition>
+			<p>Note that by the definition of the basic six trigonometric functions, we have <m>\cot(x) = \frac{1}{\tan(x)}</m>, <m>\sec(x) = \frac{1}{\cos(x)}</m>, and <m>\csc(x) = \frac{1}{\sin(x)}</m>. These relationships between trigonometric functions are called trigonometric identities. Here "identities" stands for "equalities". Note that a trigonometric identity involves trigonometric functions of an arbitrary angle and not a specific angle. As a counterexample, <m>\sin(\frac{\pi}{2}) = 1</m> is not a trigonometric identity because it is about one specific angle <m>\frac{\pi}{2}</m>. The big question is that are there any other identities. How do we find out?</p>
+			<proposition>
+				<statement>
+					<ol> 
+						<li>Look at <xref ref="problem-verifysimpletrigid"/>. Can you find some trigonometric identities? If so, write down the trigonometric identities.</li>
+						<li>Now look at the trigonometric identities that you discovered in the last part, replace the trigonometric functions in the trigonometric identities with the definition of the trigonometric functions. (If you don't remember the definition, go back to the last unit to review them.) Then try to justify that the trigonometric identities are true. (This is called a proof!)</li>
+					</ol>
+				</statement>
+			</proposition>
+			<p>In order to prove a trigonometric identity, we can use other trigonometric identities that have been established. The more identities that we have established, the larger our toolbox will be. When trying to prove a trigonometric identity, start working with the side that is more than complicated than the other. This allows you to manipulate the expression using algebra to get the simpler form.</p>
+			<proposition>
+				<statement>
+					<p>Prove the identity <me>\tan(x)\csc(x) = \sec(x)</me>.</p>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					<p>Prove the identity <me>\frac{\sec^2(\theta)-1}{\sec^2(\theta)} = \sin^2(\theta)</me>.</p>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					<p>Prove the identity <me>\frac{\sin^2(\theta)+\cos^2(\theta)}{\cos^2(\theta)\sec^2(\theta)} = 1</me>.</p>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					<p>Prove the identity <me>(\tan^2(x)+1)(\cos^2(x)-1)=-\tan^2(x)</me>.</p>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					<p>Prove the identity <me>\tan(x)+\cot(x)=\sec(x)\csc(x)</me>.</p>
+				</statement>
+			</proposition>
+			<proposition>
+				<statement>
+					<p>Prove the identity <me>\frac{\cot^2(\theta)}{1+\csc(\theta)} = \frac{1 - \sin(\theta)}{\sin(\theta)}</me>.</p>
+				</statement>
+			</proposition>
+		</section>
+	</article>
+</pretext>
